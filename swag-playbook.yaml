@@ -1,0 +1,39 @@
+---
+- name: Setup config files and SWAG
+  hosts: all
+  become: true
+
+  vars:
+    bdir: "/etc/saber_swag"
+
+  tasks:
+    - name: Load Docker Compose file
+      ansible.builtin.include_vars:
+        file: ./compose.yaml
+        name: compose_config
+
+    - name: Ensure directories exist with up-to-date contents
+      ansible.builtin.copy:
+        src: "{{ item.src }}"
+        dest: "{{ bdir }}/{{ item.dest | basename }}"
+        owner: ubuntu
+        group: ubuntu
+        mode: "{{ item.mode }}"
+      loop:
+        - { src: "./nginx/", dest: "{{ bdir }}/nginx", mode: "0644" }
+        - { src: "./reports/", dest: "{{ bdir }}/www/index", mode: "0644" }
+        - { src: "./reports/report.html", dest: "{{ bdir }}/www/", mode: "0644" }
+        - { src: "./compose.yaml", dest: "{{ bdir }}/compose.yaml", mode: "0644" }
+      loop_control:
+        label: "{{ item.src }}"
+
+    - name: Deploy SWAG container
+      community.docker.docker_container:
+        name: "{{ service_config.container_name | default('saber_dash') }}"
+        image: "{{ compose_config.services.swag.image }}"
+        state: started
+        capabilities: "{{ compose_config.services.swag.cap_add | default([]) }}"
+        env: "{{ compose_config.services.swag.environment | default({}) }}"
+        ports: "{{ compose_config.services.swag.ports | default([]) }}"
+        volumes: "{{ compose_config.services.swag.volumes | default([]) }}"
+        restart_policy: "{{ compose_config.services.swag.restart }}"

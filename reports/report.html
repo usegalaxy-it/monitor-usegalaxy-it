@@ -224,7 +224,7 @@
         <h2>Summary</h2>
     </div>
     <div class="compute-header">
-        <h3>Test run: Mar 12, 2025 03:25<br>Test are run daily</h3>
+        <h3>Test run: Mar 13, 2025 08:43<br>Test are run daily</h3>
     </div>
     <table class="custom-table">
         <thead>
@@ -266,8 +266,8 @@
                                         height: 50px;
                                         border-radius: 50%;
                                         background: conic-gradient(
-                                            #2ecc71 0% 50.0%,
-                                            #e74c3c 50.0% 100.0%,
+                                            #2ecc71 0% 100.0%,
+                                            #e74c3c 100.0% 100.0%,
                                             #f39c12 100.0% 100.0%
                                         );"
                                     >
@@ -292,9 +292,9 @@
                                         height: 50px;
                                         border-radius: 50%;
                                         background: conic-gradient(
-                                            #2ecc71 0% 50.0%,
-                                            #e74c3c 50.0% 100.0%,
-                                            #f39c12 100.0% 100.0%
+                                            #2ecc71 0% 0.0%,
+                                            #e74c3c 0.0% 0.0%,
+                                            #f39c12 0.0% 100.0%
                                         );"
                                     >
                             </div>
@@ -319,8 +319,8 @@
                                         border-radius: 50%;
                                         background: conic-gradient(
                                             #2ecc71 0% 50.0%,
-                                            #e74c3c 50.0% 100.0%,
-                                            #f39c12 100.0% 100.0%
+                                            #e74c3c 50.0% 50.0%,
+                                            #f39c12 50.0% 100.0%
                                         );"
                                     >
                             </div>
@@ -353,9 +353,9 @@
                                         height: 50px;
                                         border-radius: 50%;
                                         background: conic-gradient(
-                                            #2ecc71 0% 50.0%,
-                                            #e74c3c 50.0% 50.0%,
-                                            #f39c12 50.0% 100.0%
+                                            #2ecc71 0% 100.0%,
+                                            #e74c3c 100.0% 100.0%,
+                                            #f39c12 100.0% 100.0%
                                         );"
                                     >
                             </div>
@@ -431,8 +431,8 @@
                 <div class="compute-header">
                     <h3>Compute ID: it-pulsar<a name="it-pulsar-usegalaxy_eu"></a></h3>
                     <div>
-                        <span class="badge">Successful Jobs: 1</span>
-                        <span class="badge">Failed Jobs: 1</span>
+                        <span class="badge">Successful Jobs: 2</span>
+                        <span class="badge">Failed Jobs: 0</span>
                         <span class="badge">Timeout Jobs: 0</span>
                     </div>
                 </div>
@@ -440,11 +440,11 @@
                 <div class="tabs" id="tabs-usegalaxy_eu-it-pulsar">
                     <div class="tab active" onclick="switchTab('usegalaxy_eu-it-pulsar-successful')">
                         Successful Jobs 
-                        <span class="count-badge successful-badge">1</span>
+                        <span class="count-badge successful-badge">2</span>
                     </div>
                     <div class="tab" onclick="switchTab('usegalaxy_eu-it-pulsar-failed')">
                         Failed Jobs
-                        <span class="count-badge failed-badge">1</span>
+                        <span class="count-badge failed-badge">0</span>
                     </div>
                     <div class="tab" onclick="switchTab('usegalaxy_eu-it-pulsar-timeout')">
                         Timeout Jobs
@@ -459,12 +459,12 @@
                         
                             <div class="job-card">
                                 <div class="job-header">
-                                    <h3>Job ID: 11ac94870d0bb33a3afa94d7c84de949 <span class="job-status-ok">(Status: ok)</span></h3>
-                                    <p>Tool: toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.74+galaxy1</p>
+                                    <h3>Job ID: 11ac94870d0bb33ac2e68e71c54b70ee <span class="job-status-ok">(Status: ok)</span></h3>
+                                    <p>Tool: toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.5.3+galaxy1</p>
                                     <div>
                                         <span class="badge">Galaxy v24.2</span>
-                                        <span class="badge">Created: 2025-03-12 03:26:29.126034</span>
-                                        <span class="badge">Updated: 2025-03-12 03:28:08.137990</span>
+                                        <span class="badge">Created: 2025-03-13 08:44:59.621417</span>
+                                        <span class="badge">Updated: 2025-03-13 08:48:39.841258</span>
                                     </div>
                                 </div>
                                 <div class="job-body">
@@ -473,7 +473,7 @@
                                         <table>
                                             <tr>
                                                 <th>History ID</th>
-                                                <td>2d9c9f627e3a2461</td>
+                                                <td>f623327cacc466b2</td>
                                             </tr>
                                             <tr>
                                                 <th>Exit Code</th>
@@ -482,144 +482,7 @@
                                             <tr>
                                                 <th>Command Line</th>
                                                 <td>
-                                                    <div class="command-line">ln -s '/data/share/staging/80285543/inputs/dataset_08ab6919-021b-459f-a9c2-733e14933ca4.dat' '1_reads' && mkdir -p '/data/share/staging/80285543/outputs/dataset_3f5ecd0f-0d0e-4c41-8778-a6af288d83ac_files' && fastqc --outdir '/data/share/staging/80285543/outputs/dataset_3f5ecd0f-0d0e-4c41-8778-a6af288d83ac_files'   --threads ${GALAXY_SLOTS:-2} --dir ${TEMP:-$_GALAXY_JOB_TMP_DIR} --quiet --extract  --kmers 7 -f 'fastq' '1_reads'  && cp '/data/share/staging/80285543/outputs/dataset_3f5ecd0f-0d0e-4c41-8778-a6af288d83ac_files'/*/fastqc_data.txt output.txt && cp '/data/share/staging/80285543/outputs/dataset_3f5ecd0f-0d0e-4c41-8778-a6af288d83ac_files'/*\.html output.html</div>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    
-                                    <div class="metrics-section">
-                                        <h4>Job Metrics</h4>
-                                        <table>
-                                            <thead>
-                                                <tr>
-                                                    <th>Metric</th>
-                                                    <th>Value</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>Container ID</td>
-                                                    <td>/cvmfs/singularity.galaxyproject.org/all/fastqc:0.12.1--hdfd78af_0</td>
-                                                </tr>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>Container Type</td>
-                                                    <td>singularity</td>
-                                                </tr>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>hostname</td>
-                                                    <td>it01-exec-node-0-usegalaxy-it.novalocal</td>
-                                                </tr>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>Cores Allocated</td>
-                                                    <td>1</td>
-                                                </tr>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>Memory Allocated (MB)</td>
-                                                    <td>5734</td>
-                                                </tr>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>Job Start Time</td>
-                                                    <td>2025-03-12 04:26:49</td>
-                                                </tr>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>Job End Time</td>
-                                                    <td>2025-03-12 04:27:04</td>
-                                                </tr>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>Job Runtime (Wall Clock)</td>
-                                                    <td>15 seconds</td>
-                                                </tr>
-                                                
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    
-                                    <!-- Input/Output Section -->
-                                    <div class="io-section">
-                                        <h4>Inputs & Outputs</h4>
-                                        <table>
-                                            <thead>
-                                                <tr>
-                                                    <th>Type</th>
-                                                    <th>Name</th>
-                                                    <th>ID</th>
-                                                    <th>UUID</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                
-                                                <tr>
-                                                    <td>Input</td>
-                                                    <td>input_file</td>
-                                                    <td>4838ba20a6d8676566743841609a61b9</td>
-                                                    <td>08ab6919-021b-459f-a9c2-733e14933ca4</td>
-                                                </tr>
-                                                
-                                                
-                                                
-                                                <tr>
-                                                    <td>Output</td>
-                                                    <td>html_file</td>
-                                                    <td>4838ba20a6d86765816b9897dd483caf</td>
-                                                    <td>3f5ecd0f-0d0e-4c41-8778-a6af288d83ac</td>
-                                                </tr>
-                                                
-                                                <tr>
-                                                    <td>Output</td>
-                                                    <td>text_file</td>
-                                                    <td>4838ba20a6d8676549891b6ac28f4380</td>
-                                                    <td>330d882b-97f9-4ef8-82c2-e04dd4cc913e</td>
-                                                </tr>
-                                                
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        
-                    
-                </div>
-                
-                <!-- Failed Jobs -->
-                <div id="usegalaxy_eu-it-pulsar-failed" class="tab-content">
-                    <h4>Failed Jobs</h4>
-                    
-                        
-                            <div class="job-card">
-                                <div class="job-header">
-                                    <h3>Job ID: 11ac94870d0bb33ae9e3c07a9df60523 <span class="job-status-failed">(Status: error)</span></h3>
-                                    <p>Tool: toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.5.3+galaxy1</p>
-                                    <div>
-                                        <span class="badge">Galaxy v24.2</span>
-                                        <span class="badge">Created: 2025-03-12 03:26:29.241408</span>
-                                        <span class="badge">Updated: 2025-03-12 03:27:51.550187</span>
-                                    </div>
-                                </div>
-                                <div class="job-body">
-                                    <div class="info-section">
-                                        <h4>Job Information</h4>
-                                        <table>
-                                            <tr>
-                                                <th>History ID</th>
-                                                <td>2d9c9f627e3a2461</td>
-                                            </tr>
-                                            <tr>
-                                                <th>Exit Code</th>
-                                                <td>1</td>
-                                            </tr>
-                                            <tr>
-                                                <th>Command Line</th>
-                                                <td>
-                                                    <div class="command-line">set -o | grep -q pipefail && set -o pipefail;   ln -f -s '/data/share/staging/80285544/inputs/dataset_08ab6919-021b-459f-a9c2-733e14933ca4.dat' input_f.fastq &&   THREADS=${GALAXY_SLOTS:-4} && if [ "$THREADS" -gt 1 ]; then (( THREADS-- )); fi &&   bowtie2  -p "$THREADS"  -x '/data/db/data_managers/sacCer3/bowtie2_index/sacCer3/sacCer3'   -U 'input_f.fastq'                  | samtools sort -l 0 -T "${TMPDIR:-.}" -O bam | samtools view --no-PG -O bam -@ ${GALAXY_SLOTS:-1} -o '/data/share/staging/80285544/outputs/dataset_42093463-4d54-4e8c-93ab-65401da4f4fe.dat'</div>
+                                                    <div class="command-line">set -o | grep -q pipefail && set -o pipefail; bowtie2-build --threads ${GALAXY_SLOTS:-4} '/data/share/staging/80363959/inputs/dataset_3df6fb70-6975-4fd2-b23c-87b1a4856f5e.dat' genome && ln -s -f '/data/share/staging/80363959/inputs/dataset_3df6fb70-6975-4fd2-b23c-87b1a4856f5e.dat' genome.fa &&   ln -f -s '/data/share/staging/80363959/inputs/dataset_672d20fe-79ea-454e-988a-299fc23dc167.dat' input_f.fastq &&   THREADS=${GALAXY_SLOTS:-4} && if [ "$THREADS" -gt 1 ]; then (( THREADS-- )); fi &&   bowtie2  -p "$THREADS"  -x 'genome'   -U 'input_f.fastq'                  | samtools sort -l 0 -T "${TMPDIR:-.}" -O bam | samtools view --no-PG -O bam -@ ${GALAXY_SLOTS:-1} -o '/data/share/staging/80363959/outputs/dataset_3bce1de4-e3be-4373-8787-589df4b8ec55.dat'</div>
                                                 </td>
                                             </tr>
                                         </table>
@@ -663,17 +526,17 @@
                                                 
                                                 <tr class="metric-row">
                                                     <td>Job Start Time</td>
-                                                    <td>2025-03-12 04:26:32</td>
+                                                    <td>2025-03-13 09:46:18</td>
                                                 </tr>
                                                 
                                                 <tr class="metric-row">
                                                     <td>Job End Time</td>
-                                                    <td>2025-03-12 04:26:49</td>
+                                                    <td>2025-03-13 09:47:31</td>
                                                 </tr>
                                                 
                                                 <tr class="metric-row">
                                                     <td>Job Runtime (Wall Clock)</td>
-                                                    <td>17 seconds</td>
+                                                    <td>1 minute</td>
                                                 </tr>
                                                 
                                             </tbody>
@@ -697,8 +560,15 @@
                                                 <tr>
                                                     <td>Input</td>
                                                     <td>library|input_1</td>
-                                                    <td>4838ba20a6d8676566743841609a61b9</td>
-                                                    <td>08ab6919-021b-459f-a9c2-733e14933ca4</td>
+                                                    <td>4838ba20a6d86765e587370c6ca1f375</td>
+                                                    <td>672d20fe-79ea-454e-988a-299fc23dc167</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                    <td>Input</td>
+                                                    <td>reference_genome|own_file</td>
+                                                    <td>4838ba20a6d86765eaf75a58520223b9</td>
+                                                    <td>3df6fb70-6975-4fd2-b23c-87b1a4856f5e</td>
                                                 </tr>
                                                 
                                                 
@@ -706,8 +576,8 @@
                                                 <tr>
                                                     <td>Output</td>
                                                     <td>output</td>
-                                                    <td>4838ba20a6d86765cbc6c0213ded1f33</td>
-                                                    <td>42093463-4d54-4e8c-93ab-65401da4f4fe</td>
+                                                    <td>4838ba20a6d86765d799c3f192cd4189</td>
+                                                    <td>3bce1de4-e3be-4373-8787-589df4b8ec55</td>
                                                 </tr>
                                                 
                                             </tbody>
@@ -716,6 +586,143 @@
                                 </div>
                             </div>
                         
+                            <div class="job-card">
+                                <div class="job-header">
+                                    <h3>Job ID: 11ac94870d0bb33af8ea7286100f32ce <span class="job-status-ok">(Status: ok)</span></h3>
+                                    <p>Tool: toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.74+galaxy1</p>
+                                    <div>
+                                        <span class="badge">Galaxy v24.2</span>
+                                        <span class="badge">Created: 2025-03-13 08:44:59.531258</span>
+                                        <span class="badge">Updated: 2025-03-13 08:47:19.445224</span>
+                                    </div>
+                                </div>
+                                <div class="job-body">
+                                    <div class="info-section">
+                                        <h4>Job Information</h4>
+                                        <table>
+                                            <tr>
+                                                <th>History ID</th>
+                                                <td>f623327cacc466b2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Exit Code</th>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Command Line</th>
+                                                <td>
+                                                    <div class="command-line">ln -s '/data/share/staging/80363958/inputs/dataset_672d20fe-79ea-454e-988a-299fc23dc167.dat' '1_reads' && mkdir -p '/data/share/staging/80363958/outputs/dataset_69497540-1a3c-40cd-85b1-eeee82434617_files' && fastqc --outdir '/data/share/staging/80363958/outputs/dataset_69497540-1a3c-40cd-85b1-eeee82434617_files'   --threads ${GALAXY_SLOTS:-2} --dir ${TEMP:-$_GALAXY_JOB_TMP_DIR} --quiet --extract  --kmers 7 -f 'fastq' '1_reads'  && cp '/data/share/staging/80363958/outputs/dataset_69497540-1a3c-40cd-85b1-eeee82434617_files'/*/fastqc_data.txt output.txt && cp '/data/share/staging/80363958/outputs/dataset_69497540-1a3c-40cd-85b1-eeee82434617_files'/*\.html output.html</div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    
+                                    <div class="metrics-section">
+                                        <h4>Job Metrics</h4>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Metric</th>
+                                                    <th>Value</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                
+                                                <tr class="metric-row">
+                                                    <td>Container ID</td>
+                                                    <td>/cvmfs/singularity.galaxyproject.org/all/fastqc:0.12.1--hdfd78af_0</td>
+                                                </tr>
+                                                
+                                                <tr class="metric-row">
+                                                    <td>Container Type</td>
+                                                    <td>singularity</td>
+                                                </tr>
+                                                
+                                                <tr class="metric-row">
+                                                    <td>hostname</td>
+                                                    <td>it01-exec-node-0-usegalaxy-it.novalocal</td>
+                                                </tr>
+                                                
+                                                <tr class="metric-row">
+                                                    <td>Cores Allocated</td>
+                                                    <td>1</td>
+                                                </tr>
+                                                
+                                                <tr class="metric-row">
+                                                    <td>Memory Allocated (MB)</td>
+                                                    <td>5734</td>
+                                                </tr>
+                                                
+                                                <tr class="metric-row">
+                                                    <td>Job Start Time</td>
+                                                    <td>2025-03-13 09:44:58</td>
+                                                </tr>
+                                                
+                                                <tr class="metric-row">
+                                                    <td>Job End Time</td>
+                                                    <td>2025-03-13 09:46:12</td>
+                                                </tr>
+                                                
+                                                <tr class="metric-row">
+                                                    <td>Job Runtime (Wall Clock)</td>
+                                                    <td>1 minute</td>
+                                                </tr>
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    
+                                    <!-- Input/Output Section -->
+                                    <div class="io-section">
+                                        <h4>Inputs & Outputs</h4>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Type</th>
+                                                    <th>Name</th>
+                                                    <th>ID</th>
+                                                    <th>UUID</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                
+                                                <tr>
+                                                    <td>Input</td>
+                                                    <td>input_file</td>
+                                                    <td>4838ba20a6d86765e587370c6ca1f375</td>
+                                                    <td>672d20fe-79ea-454e-988a-299fc23dc167</td>
+                                                </tr>
+                                                
+                                                
+                                                
+                                                <tr>
+                                                    <td>Output</td>
+                                                    <td>html_file</td>
+                                                    <td>4838ba20a6d86765eead8341310b5c9c</td>
+                                                    <td>69497540-1a3c-40cd-85b1-eeee82434617</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                    <td>Output</td>
+                                                    <td>text_file</td>
+                                                    <td>4838ba20a6d86765d1ce60808beb9a4c</td>
+                                                    <td>f28ca26c-886c-4ffe-97cd-61279f42eb70</td>
+                                                </tr>
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                </div>
+                
+                <!-- Failed Jobs -->
+                <div id="usegalaxy_eu-it-pulsar-failed" class="tab-content">
+                    <h4>Failed Jobs</h4>
+                    
+                        <p>No failed jobs found.</p>
                     
                 </div>
                 
@@ -732,24 +739,24 @@
                 <div class="compute-header">
                     <h3>Compute ID: it02-pulsar<a name="it02-pulsar-usegalaxy_eu"></a></h3>
                     <div>
-                        <span class="badge">Successful Jobs: 1</span>
-                        <span class="badge">Failed Jobs: 1</span>
-                        <span class="badge">Timeout Jobs: 0</span>
+                        <span class="badge">Successful Jobs: 0</span>
+                        <span class="badge">Failed Jobs: 0</span>
+                        <span class="badge">Timeout Jobs: 2</span>
                     </div>
                 </div>
                 
                 <div class="tabs" id="tabs-usegalaxy_eu-it02-pulsar">
                     <div class="tab active" onclick="switchTab('usegalaxy_eu-it02-pulsar-successful')">
                         Successful Jobs 
-                        <span class="count-badge successful-badge">1</span>
+                        <span class="count-badge successful-badge">0</span>
                     </div>
                     <div class="tab" onclick="switchTab('usegalaxy_eu-it02-pulsar-failed')">
                         Failed Jobs
-                        <span class="count-badge failed-badge">1</span>
+                        <span class="count-badge failed-badge">0</span>
                     </div>
                     <div class="tab" onclick="switchTab('usegalaxy_eu-it02-pulsar-timeout')">
                         Timeout Jobs
-                        <span class="count-badge timeout-badge">0</span>
+                        <span class="count-badge timeout-badge">2</span>
                     </div>
                 </div>
                 
@@ -757,136 +764,7 @@
                 <div id="usegalaxy_eu-it02-pulsar-successful" class="tab-content active">
                     <h4>Successful Jobs</h4>
                     
-                        
-                            <div class="job-card">
-                                <div class="job-header">
-                                    <h3>Job ID: 11ac94870d0bb33a2cc56a68c086b86e <span class="job-status-ok">(Status: ok)</span></h3>
-                                    <p>Tool: toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.74+galaxy1</p>
-                                    <div>
-                                        <span class="badge">Galaxy v24.2</span>
-                                        <span class="badge">Created: 2025-03-12 03:28:29.831939</span>
-                                        <span class="badge">Updated: 2025-03-12 03:30:12.224215</span>
-                                    </div>
-                                </div>
-                                <div class="job-body">
-                                    <div class="info-section">
-                                        <h4>Job Information</h4>
-                                        <table>
-                                            <tr>
-                                                <th>History ID</th>
-                                                <td>2d9c9f627e3a2461</td>
-                                            </tr>
-                                            <tr>
-                                                <th>Exit Code</th>
-                                                <td>0</td>
-                                            </tr>
-                                            <tr>
-                                                <th>Command Line</th>
-                                                <td>
-                                                    <div class="command-line">ln -s '/data/share/staging/80285602/inputs/dataset_08ab6919-021b-459f-a9c2-733e14933ca4.dat' '1_reads' && mkdir -p '/data/share/staging/80285602/outputs/dataset_b898fef3-fb13-43e5-a72d-331c07d68d5e_files' && fastqc --outdir '/data/share/staging/80285602/outputs/dataset_b898fef3-fb13-43e5-a72d-331c07d68d5e_files'   --threads ${GALAXY_SLOTS:-2} --dir ${TEMP:-$_GALAXY_JOB_TMP_DIR} --quiet --extract  --kmers 7 -f 'fastq' '1_reads'  && cp '/data/share/staging/80285602/outputs/dataset_b898fef3-fb13-43e5-a72d-331c07d68d5e_files'/*/fastqc_data.txt output.txt && cp '/data/share/staging/80285602/outputs/dataset_b898fef3-fb13-43e5-a72d-331c07d68d5e_files'/*\.html output.html</div>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    
-                                    <div class="metrics-section">
-                                        <h4>Job Metrics</h4>
-                                        <table>
-                                            <thead>
-                                                <tr>
-                                                    <th>Metric</th>
-                                                    <th>Value</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>Container ID</td>
-                                                    <td>/cvmfs/singularity.galaxyproject.org/all/fastqc:0.12.1--hdfd78af_0</td>
-                                                </tr>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>Container Type</td>
-                                                    <td>singularity</td>
-                                                </tr>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>hostname</td>
-                                                    <td>it02-exec-node-0-usegalaxy-eu.novalocal</td>
-                                                </tr>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>Cores Allocated</td>
-                                                    <td>1</td>
-                                                </tr>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>Memory Allocated (MB)</td>
-                                                    <td>5734</td>
-                                                </tr>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>Job Start Time</td>
-                                                    <td>2025-03-12 04:26:17</td>
-                                                </tr>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>Job End Time</td>
-                                                    <td>2025-03-12 04:27:11</td>
-                                                </tr>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>Job Runtime (Wall Clock)</td>
-                                                    <td>54 seconds</td>
-                                                </tr>
-                                                
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    
-                                    <!-- Input/Output Section -->
-                                    <div class="io-section">
-                                        <h4>Inputs & Outputs</h4>
-                                        <table>
-                                            <thead>
-                                                <tr>
-                                                    <th>Type</th>
-                                                    <th>Name</th>
-                                                    <th>ID</th>
-                                                    <th>UUID</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                
-                                                <tr>
-                                                    <td>Input</td>
-                                                    <td>input_file</td>
-                                                    <td>4838ba20a6d8676566743841609a61b9</td>
-                                                    <td>08ab6919-021b-459f-a9c2-733e14933ca4</td>
-                                                </tr>
-                                                
-                                                
-                                                
-                                                <tr>
-                                                    <td>Output</td>
-                                                    <td>html_file</td>
-                                                    <td>4838ba20a6d86765f8ae1d1c16d71709</td>
-                                                    <td>b898fef3-fb13-43e5-a72d-331c07d68d5e</td>
-                                                </tr>
-                                                
-                                                <tr>
-                                                    <td>Output</td>
-                                                    <td>text_file</td>
-                                                    <td>4838ba20a6d86765c0e815130cf3ffa9</td>
-                                                    <td>9b54c48b-8a0d-42c9-b4e5-a0067c41da5b</td>
-                                                </tr>
-                                                
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        
+                        <p>No successful jobs found.</p>
                     
                 </div>
                 
@@ -894,15 +772,23 @@
                 <div id="usegalaxy_eu-it02-pulsar-failed" class="tab-content">
                     <h4>Failed Jobs</h4>
                     
+                        <p>No failed jobs found.</p>
+                    
+                </div>
+                
+                <!-- Timeout Jobs -->
+                <div id="usegalaxy_eu-it02-pulsar-timeout" class="tab-content">
+                    <h4>Timeout Jobs</h4>
+                    
                         
                             <div class="job-card">
                                 <div class="job-header">
-                                    <h3>Job ID: 11ac94870d0bb33a1c6deb5662aaf00b <span class="job-status-failed">(Status: error)</span></h3>
+                                    <h3>Job ID: 11ac94870d0bb33afbee755a17952011 <span class="job-status-timeout">(Status: running)</span></h3>
                                     <p>Tool: toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.5.3+galaxy1</p>
                                     <div>
                                         <span class="badge">Galaxy v24.2</span>
-                                        <span class="badge">Created: 2025-03-12 03:28:29.937775</span>
-                                        <span class="badge">Updated: 2025-03-12 03:30:41.524810</span>
+                                        <span class="badge">Created: 2025-03-13 08:48:57.282542</span>
+                                        <span class="badge">Updated: 2025-03-13 08:51:10.473832</span>
                                     </div>
                                 </div>
                                 <div class="job-body">
@@ -911,16 +797,16 @@
                                         <table>
                                             <tr>
                                                 <th>History ID</th>
-                                                <td>2d9c9f627e3a2461</td>
+                                                <td>f623327cacc466b2</td>
                                             </tr>
                                             <tr>
                                                 <th>Exit Code</th>
-                                                <td>1</td>
+                                                <td>None</td>
                                             </tr>
                                             <tr>
                                                 <th>Command Line</th>
                                                 <td>
-                                                    <div class="command-line">set -o | grep -q pipefail && set -o pipefail;   ln -f -s '/data/share/staging/80285603/inputs/dataset_08ab6919-021b-459f-a9c2-733e14933ca4.dat' input_f.fastq &&   THREADS=${GALAXY_SLOTS:-4} && if [ "$THREADS" -gt 1 ]; then (( THREADS-- )); fi &&   bowtie2  -p "$THREADS"  -x '/data/db/data_managers/sacCer3/bowtie2_index/sacCer3/sacCer3'   -U 'input_f.fastq'                  | samtools sort -l 0 -T "${TMPDIR:-.}" -O bam | samtools view --no-PG -O bam -@ ${GALAXY_SLOTS:-1} -o '/data/share/staging/80285603/outputs/dataset_6ca30439-c68d-45e6-80a9-e927614d2e75.dat'</div>
+                                                    <div class="command-line">set -o | grep -q pipefail && set -o pipefail; bowtie2-build --threads ${GALAXY_SLOTS:-4} '/data/share/staging/80364149/inputs/dataset_3df6fb70-6975-4fd2-b23c-87b1a4856f5e.dat' genome && ln -s -f '/data/share/staging/80364149/inputs/dataset_3df6fb70-6975-4fd2-b23c-87b1a4856f5e.dat' genome.fa &&   ln -f -s '/data/share/staging/80364149/inputs/dataset_672d20fe-79ea-454e-988a-299fc23dc167.dat' input_f.fastq &&   THREADS=${GALAXY_SLOTS:-4} && if [ "$THREADS" -gt 1 ]; then (( THREADS-- )); fi &&   bowtie2  -p "$THREADS"  -x 'genome'   -U 'input_f.fastq'                  | samtools sort -l 0 -T "${TMPDIR:-.}" -O bam | samtools view --no-PG -O bam -@ ${GALAXY_SLOTS:-1} -o '/data/share/staging/80364149/outputs/dataset_40ff3a3e-01ce-48df-803b-5bc0233483e5.dat'</div>
                                                 </td>
                                             </tr>
                                         </table>
@@ -936,46 +822,6 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>Container ID</td>
-                                                    <td>/cvmfs/singularity.galaxyproject.org/all/mulled-v2-c742dccc9d8fabfcff2af0d8d6799dbc711366cf:a2e4688a25bd1726a756713d5233a63a5ac7f597-0</td>
-                                                </tr>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>Container Type</td>
-                                                    <td>singularity</td>
-                                                </tr>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>hostname</td>
-                                                    <td>it02-exec-node-0-usegalaxy-eu.novalocal</td>
-                                                </tr>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>Cores Allocated</td>
-                                                    <td>1</td>
-                                                </tr>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>Memory Allocated (MB)</td>
-                                                    <td>20480</td>
-                                                </tr>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>Job Start Time</td>
-                                                    <td>2025-03-12 04:27:38</td>
-                                                </tr>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>Job End Time</td>
-                                                    <td>2025-03-12 04:27:38</td>
-                                                </tr>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>Job Runtime (Wall Clock)</td>
-                                                    <td>0 seconds</td>
-                                                </tr>
                                                 
                                             </tbody>
                                         </table>
@@ -998,8 +844,15 @@
                                                 <tr>
                                                     <td>Input</td>
                                                     <td>library|input_1</td>
-                                                    <td>4838ba20a6d8676566743841609a61b9</td>
-                                                    <td>08ab6919-021b-459f-a9c2-733e14933ca4</td>
+                                                    <td>4838ba20a6d86765e587370c6ca1f375</td>
+                                                    <td>672d20fe-79ea-454e-988a-299fc23dc167</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                    <td>Input</td>
+                                                    <td>reference_genome|own_file</td>
+                                                    <td>4838ba20a6d86765eaf75a58520223b9</td>
+                                                    <td>3df6fb70-6975-4fd2-b23c-87b1a4856f5e</td>
                                                 </tr>
                                                 
                                                 
@@ -1007,8 +860,97 @@
                                                 <tr>
                                                     <td>Output</td>
                                                     <td>output</td>
-                                                    <td>4838ba20a6d867656868ae69ab2ec40f</td>
-                                                    <td>6ca30439-c68d-45e6-80a9-e927614d2e75</td>
+                                                    <td>4838ba20a6d86765ea12538273293823</td>
+                                                    <td>40ff3a3e-01ce-48df-803b-5bc0233483e5</td>
+                                                </tr>
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="job-card">
+                                <div class="job-header">
+                                    <h3>Job ID: 11ac94870d0bb33a4449b2c8929785fa <span class="job-status-timeout">(Status: running)</span></h3>
+                                    <p>Tool: toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.74+galaxy1</p>
+                                    <div>
+                                        <span class="badge">Galaxy v24.2</span>
+                                        <span class="badge">Created: 2025-03-13 08:48:57.180439</span>
+                                        <span class="badge">Updated: 2025-03-13 08:49:50.434308</span>
+                                    </div>
+                                </div>
+                                <div class="job-body">
+                                    <div class="info-section">
+                                        <h4>Job Information</h4>
+                                        <table>
+                                            <tr>
+                                                <th>History ID</th>
+                                                <td>f623327cacc466b2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Exit Code</th>
+                                                <td>None</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Command Line</th>
+                                                <td>
+                                                    <div class="command-line">ln -s '/data/share/staging/80364148/inputs/dataset_672d20fe-79ea-454e-988a-299fc23dc167.dat' '1_reads' && mkdir -p '/data/share/staging/80364148/outputs/dataset_95098d6b-4041-4dd5-b5fa-34b4069f1628_files' && fastqc --outdir '/data/share/staging/80364148/outputs/dataset_95098d6b-4041-4dd5-b5fa-34b4069f1628_files'   --threads ${GALAXY_SLOTS:-2} --dir ${TEMP:-$_GALAXY_JOB_TMP_DIR} --quiet --extract  --kmers 7 -f 'fastq' '1_reads'  && cp '/data/share/staging/80364148/outputs/dataset_95098d6b-4041-4dd5-b5fa-34b4069f1628_files'/*/fastqc_data.txt output.txt && cp '/data/share/staging/80364148/outputs/dataset_95098d6b-4041-4dd5-b5fa-34b4069f1628_files'/*\.html output.html</div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    
+                                    <div class="metrics-section">
+                                        <h4>Job Metrics</h4>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Metric</th>
+                                                    <th>Value</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    
+                                    <!-- Input/Output Section -->
+                                    <div class="io-section">
+                                        <h4>Inputs & Outputs</h4>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Type</th>
+                                                    <th>Name</th>
+                                                    <th>ID</th>
+                                                    <th>UUID</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                
+                                                <tr>
+                                                    <td>Input</td>
+                                                    <td>input_file</td>
+                                                    <td>4838ba20a6d86765e587370c6ca1f375</td>
+                                                    <td>672d20fe-79ea-454e-988a-299fc23dc167</td>
+                                                </tr>
+                                                
+                                                
+                                                
+                                                <tr>
+                                                    <td>Output</td>
+                                                    <td>html_file</td>
+                                                    <td>4838ba20a6d86765df5ac63a3b6a6ebf</td>
+                                                    <td>95098d6b-4041-4dd5-b5fa-34b4069f1628</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                    <td>Output</td>
+                                                    <td>text_file</td>
+                                                    <td>4838ba20a6d867658843ad16d8e12007</td>
+                                                    <td>f4e95467-5662-4128-a880-5aa3f1e97b81</td>
                                                 </tr>
                                                 
                                             </tbody>
@@ -1019,14 +961,6 @@
                         
                     
                 </div>
-                
-                <!-- Timeout Jobs -->
-                <div id="usegalaxy_eu-it02-pulsar-timeout" class="tab-content">
-                    <h4>Timeout Jobs</h4>
-                    
-                        <p>No timeout jobs found.</p>
-                    
-                </div>
             </div>
             
             <div class="compute-section">
@@ -1034,8 +968,8 @@
                     <h3>Compute ID: it03-pulsar<a name="it03-pulsar-usegalaxy_eu"></a></h3>
                     <div>
                         <span class="badge">Successful Jobs: 1</span>
-                        <span class="badge">Failed Jobs: 1</span>
-                        <span class="badge">Timeout Jobs: 0</span>
+                        <span class="badge">Failed Jobs: 0</span>
+                        <span class="badge">Timeout Jobs: 1</span>
                     </div>
                 </div>
                 
@@ -1046,11 +980,11 @@
                     </div>
                     <div class="tab" onclick="switchTab('usegalaxy_eu-it03-pulsar-failed')">
                         Failed Jobs
-                        <span class="count-badge failed-badge">1</span>
+                        <span class="count-badge failed-badge">0</span>
                     </div>
                     <div class="tab" onclick="switchTab('usegalaxy_eu-it03-pulsar-timeout')">
                         Timeout Jobs
-                        <span class="count-badge timeout-badge">0</span>
+                        <span class="count-badge timeout-badge">1</span>
                     </div>
                 </div>
                 
@@ -1061,12 +995,12 @@
                         
                             <div class="job-card">
                                 <div class="job-header">
-                                    <h3>Job ID: 11ac94870d0bb33ae566705384e0e7e5 <span class="job-status-ok">(Status: ok)</span></h3>
+                                    <h3>Job ID: 11ac94870d0bb33a0ffcae4c65d6e893 <span class="job-status-ok">(Status: ok)</span></h3>
                                     <p>Tool: toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.74+galaxy1</p>
                                     <div>
                                         <span class="badge">Galaxy v24.2</span>
-                                        <span class="badge">Created: 2025-03-12 03:31:01.896094</span>
-                                        <span class="badge">Updated: 2025-03-12 03:32:32.009960</span>
+                                        <span class="badge">Created: 2025-03-13 09:28:44.661463</span>
+                                        <span class="badge">Updated: 2025-03-13 09:31:30.787866</span>
                                     </div>
                                 </div>
                                 <div class="job-body">
@@ -1075,7 +1009,7 @@
                                         <table>
                                             <tr>
                                                 <th>History ID</th>
-                                                <td>2d9c9f627e3a2461</td>
+                                                <td>f623327cacc466b2</td>
                                             </tr>
                                             <tr>
                                                 <th>Exit Code</th>
@@ -1084,7 +1018,7 @@
                                             <tr>
                                                 <th>Command Line</th>
                                                 <td>
-                                                    <div class="command-line">ln -s '/data/share/staging/80285664/inputs/dataset_08ab6919-021b-459f-a9c2-733e14933ca4.dat' '1_reads' && mkdir -p '/data/share/staging/80285664/outputs/dataset_ae3f2783-ed21-4d47-a3e5-1ec308c79f9e_files' && fastqc --outdir '/data/share/staging/80285664/outputs/dataset_ae3f2783-ed21-4d47-a3e5-1ec308c79f9e_files'   --threads ${GALAXY_SLOTS:-2} --dir ${TEMP:-$_GALAXY_JOB_TMP_DIR} --quiet --extract  --kmers 7 -f 'fastq' '1_reads'  && cp '/data/share/staging/80285664/outputs/dataset_ae3f2783-ed21-4d47-a3e5-1ec308c79f9e_files'/*/fastqc_data.txt output.txt && cp '/data/share/staging/80285664/outputs/dataset_ae3f2783-ed21-4d47-a3e5-1ec308c79f9e_files'/*\.html output.html</div>
+                                                    <div class="command-line">ln -s '/data/share/staging/80365990/inputs/dataset_672d20fe-79ea-454e-988a-299fc23dc167.dat' '1_reads' && mkdir -p '/data/share/staging/80365990/outputs/dataset_d947ec87-cd8d-4d58-8998-ca9c25454fc1_files' && fastqc --outdir '/data/share/staging/80365990/outputs/dataset_d947ec87-cd8d-4d58-8998-ca9c25454fc1_files'   --threads ${GALAXY_SLOTS:-2} --dir ${TEMP:-$_GALAXY_JOB_TMP_DIR} --quiet --extract  --kmers 7 -f 'fastq' '1_reads'  && cp '/data/share/staging/80365990/outputs/dataset_d947ec87-cd8d-4d58-8998-ca9c25454fc1_files'/*/fastqc_data.txt output.txt && cp '/data/share/staging/80365990/outputs/dataset_d947ec87-cd8d-4d58-8998-ca9c25454fc1_files'/*\.html output.html</div>
                                                 </td>
                                             </tr>
                                         </table>
@@ -1128,17 +1062,17 @@
                                                 
                                                 <tr class="metric-row">
                                                     <td>Job Start Time</td>
-                                                    <td>2025-03-12 04:31:01</td>
+                                                    <td>2025-03-13 10:29:08</td>
                                                 </tr>
                                                 
                                                 <tr class="metric-row">
                                                     <td>Job End Time</td>
-                                                    <td>2025-03-12 04:31:30</td>
+                                                    <td>2025-03-13 10:30:26</td>
                                                 </tr>
                                                 
                                                 <tr class="metric-row">
                                                     <td>Job Runtime (Wall Clock)</td>
-                                                    <td>29 seconds</td>
+                                                    <td>1 minute</td>
                                                 </tr>
                                                 
                                             </tbody>
@@ -1162,8 +1096,8 @@
                                                 <tr>
                                                     <td>Input</td>
                                                     <td>input_file</td>
-                                                    <td>4838ba20a6d8676566743841609a61b9</td>
-                                                    <td>08ab6919-021b-459f-a9c2-733e14933ca4</td>
+                                                    <td>4838ba20a6d86765e587370c6ca1f375</td>
+                                                    <td>672d20fe-79ea-454e-988a-299fc23dc167</td>
                                                 </tr>
                                                 
                                                 
@@ -1171,15 +1105,15 @@
                                                 <tr>
                                                     <td>Output</td>
                                                     <td>html_file</td>
-                                                    <td>4838ba20a6d86765d222372aa8151038</td>
-                                                    <td>ae3f2783-ed21-4d47-a3e5-1ec308c79f9e</td>
+                                                    <td>4838ba20a6d86765ae39a8ad3b986954</td>
+                                                    <td>d947ec87-cd8d-4d58-8998-ca9c25454fc1</td>
                                                 </tr>
                                                 
                                                 <tr>
                                                     <td>Output</td>
                                                     <td>text_file</td>
-                                                    <td>4838ba20a6d8676511090f982fb3f6de</td>
-                                                    <td>3e602b47-30b9-489e-a44b-db2c78537cdf</td>
+                                                    <td>4838ba20a6d8676592872c84e8fa80a3</td>
+                                                    <td>e3a43b44-335a-455b-bd22-3429e301e580</td>
                                                 </tr>
                                                 
                                             </tbody>
@@ -1195,15 +1129,23 @@
                 <div id="usegalaxy_eu-it03-pulsar-failed" class="tab-content">
                     <h4>Failed Jobs</h4>
                     
+                        <p>No failed jobs found.</p>
+                    
+                </div>
+                
+                <!-- Timeout Jobs -->
+                <div id="usegalaxy_eu-it03-pulsar-timeout" class="tab-content">
+                    <h4>Timeout Jobs</h4>
+                    
                         
                             <div class="job-card">
                                 <div class="job-header">
-                                    <h3>Job ID: 11ac94870d0bb33aa532a328215723a9 <span class="job-status-failed">(Status: error)</span></h3>
+                                    <h3>Job ID: 11ac94870d0bb33a5f671fcd9125e532 <span class="job-status-timeout">(Status: running)</span></h3>
                                     <p>Tool: toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.5.3+galaxy1</p>
                                     <div>
                                         <span class="badge">Galaxy v24.2</span>
-                                        <span class="badge">Created: 2025-03-12 03:31:01.985799</span>
-                                        <span class="badge">Updated: 2025-03-12 03:32:26.552213</span>
+                                        <span class="badge">Created: 2025-03-13 09:28:44.765821</span>
+                                        <span class="badge">Updated: 2025-03-13 09:30:18.406396</span>
                                     </div>
                                 </div>
                                 <div class="job-body">
@@ -1212,16 +1154,16 @@
                                         <table>
                                             <tr>
                                                 <th>History ID</th>
-                                                <td>2d9c9f627e3a2461</td>
+                                                <td>f623327cacc466b2</td>
                                             </tr>
                                             <tr>
                                                 <th>Exit Code</th>
-                                                <td>1</td>
+                                                <td>None</td>
                                             </tr>
                                             <tr>
                                                 <th>Command Line</th>
                                                 <td>
-                                                    <div class="command-line">set -o | grep -q pipefail && set -o pipefail;   ln -f -s '/data/share/staging/80285665/inputs/dataset_08ab6919-021b-459f-a9c2-733e14933ca4.dat' input_f.fastq &&   THREADS=${GALAXY_SLOTS:-4} && if [ "$THREADS" -gt 1 ]; then (( THREADS-- )); fi &&   bowtie2  -p "$THREADS"  -x '/data/db/data_managers/sacCer3/bowtie2_index/sacCer3/sacCer3'   -U 'input_f.fastq'                  | samtools sort -l 0 -T "${TMPDIR:-.}" -O bam | samtools view --no-PG -O bam -@ ${GALAXY_SLOTS:-1} -o '/data/share/staging/80285665/outputs/dataset_32e49c58-fd66-4af1-bc51-1ee9654356a5.dat'</div>
+                                                    <div class="command-line">set -o | grep -q pipefail && set -o pipefail; bowtie2-build --threads ${GALAXY_SLOTS:-4} '/data/share/staging/80365991/inputs/dataset_3df6fb70-6975-4fd2-b23c-87b1a4856f5e.dat' genome && ln -s -f '/data/share/staging/80365991/inputs/dataset_3df6fb70-6975-4fd2-b23c-87b1a4856f5e.dat' genome.fa &&   ln -f -s '/data/share/staging/80365991/inputs/dataset_672d20fe-79ea-454e-988a-299fc23dc167.dat' input_f.fastq &&   THREADS=${GALAXY_SLOTS:-4} && if [ "$THREADS" -gt 1 ]; then (( THREADS-- )); fi &&   bowtie2  -p "$THREADS"  -x 'genome'   -U 'input_f.fastq'                  | samtools sort -l 0 -T "${TMPDIR:-.}" -O bam | samtools view --no-PG -O bam -@ ${GALAXY_SLOTS:-1} -o '/data/share/staging/80365991/outputs/dataset_85e85059-3e35-4d50-8359-47a359f9a1a1.dat'</div>
                                                 </td>
                                             </tr>
                                         </table>
@@ -1237,46 +1179,6 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>Container ID</td>
-                                                    <td>/cvmfs/singularity.galaxyproject.org/all/mulled-v2-c742dccc9d8fabfcff2af0d8d6799dbc711366cf:a2e4688a25bd1726a756713d5233a63a5ac7f597-0</td>
-                                                </tr>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>Container Type</td>
-                                                    <td>singularity</td>
-                                                </tr>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>hostname</td>
-                                                    <td>it03-exec-node-0-usegalaxy-it.garr.cloud.pa</td>
-                                                </tr>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>Cores Allocated</td>
-                                                    <td>1</td>
-                                                </tr>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>Memory Allocated (MB)</td>
-                                                    <td>20480</td>
-                                                </tr>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>Job Start Time</td>
-                                                    <td>2025-03-12 04:31:20</td>
-                                                </tr>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>Job End Time</td>
-                                                    <td>2025-03-12 04:31:23</td>
-                                                </tr>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>Job Runtime (Wall Clock)</td>
-                                                    <td>3 seconds</td>
-                                                </tr>
                                                 
                                             </tbody>
                                         </table>
@@ -1299,8 +1201,15 @@
                                                 <tr>
                                                     <td>Input</td>
                                                     <td>library|input_1</td>
-                                                    <td>4838ba20a6d8676566743841609a61b9</td>
-                                                    <td>08ab6919-021b-459f-a9c2-733e14933ca4</td>
+                                                    <td>4838ba20a6d86765e587370c6ca1f375</td>
+                                                    <td>672d20fe-79ea-454e-988a-299fc23dc167</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                    <td>Input</td>
+                                                    <td>reference_genome|own_file</td>
+                                                    <td>4838ba20a6d86765eaf75a58520223b9</td>
+                                                    <td>3df6fb70-6975-4fd2-b23c-87b1a4856f5e</td>
                                                 </tr>
                                                 
                                                 
@@ -1308,8 +1217,8 @@
                                                 <tr>
                                                     <td>Output</td>
                                                     <td>output</td>
-                                                    <td>4838ba20a6d867653a98df4d8f97a65e</td>
-                                                    <td>32e49c58-fd66-4af1-bc51-1ee9654356a5</td>
+                                                    <td>4838ba20a6d86765d1ed80009c00261e</td>
+                                                    <td>85e85059-3e35-4d50-8359-47a359f9a1a1</td>
                                                 </tr>
                                                 
                                             </tbody>
@@ -1318,14 +1227,6 @@
                                 </div>
                             </div>
                         
-                    
-                </div>
-                
-                <!-- Timeout Jobs -->
-                <div id="usegalaxy_eu-it03-pulsar-timeout" class="tab-content">
-                    <h4>Timeout Jobs</h4>
-                    
-                        <p>No timeout jobs found.</p>
                     
                 </div>
             </div>
@@ -1342,16 +1243,16 @@
                 <div class="compute-header">
                     <h3>Compute ID: it-pulsar<a name="it-pulsar-usegalaxy_it"></a></h3>
                     <div>
-                        <span class="badge">Successful Jobs: 1</span>
+                        <span class="badge">Successful Jobs: 2</span>
                         <span class="badge">Failed Jobs: 0</span>
-                        <span class="badge">Timeout Jobs: 1</span>
+                        <span class="badge">Timeout Jobs: 0</span>
                     </div>
                 </div>
                 
                 <div class="tabs" id="tabs-usegalaxy_it-it-pulsar">
                     <div class="tab active" onclick="switchTab('usegalaxy_it-it-pulsar-successful')">
                         Successful Jobs 
-                        <span class="count-badge successful-badge">1</span>
+                        <span class="count-badge successful-badge">2</span>
                     </div>
                     <div class="tab" onclick="switchTab('usegalaxy_it-it-pulsar-failed')">
                         Failed Jobs
@@ -1359,7 +1260,7 @@
                     </div>
                     <div class="tab" onclick="switchTab('usegalaxy_it-it-pulsar-timeout')">
                         Timeout Jobs
-                        <span class="count-badge timeout-badge">1</span>
+                        <span class="count-badge timeout-badge">0</span>
                     </div>
                 </div>
                 
@@ -1370,12 +1271,12 @@
                         
                             <div class="job-card">
                                 <div class="job-header">
-                                    <h3>Job ID: 1a511dc178b66d07 <span class="job-status-ok">(Status: ok)</span></h3>
+                                    <h3>Job ID: e1daa6c9813625ab <span class="job-status-ok">(Status: ok)</span></h3>
                                     <p>Tool: toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.74+galaxy1</p>
                                     <div>
                                         <span class="badge">Galaxy v24.1</span>
-                                        <span class="badge">Created: 2025-03-12 03:34:26.331481</span>
-                                        <span class="badge">Updated: 2025-03-12 03:45:35.721598</span>
+                                        <span class="badge">Created: 2025-03-13 10:09:35.445319</span>
+                                        <span class="badge">Updated: 2025-03-13 10:16:59.696656</span>
                                     </div>
                                 </div>
                                 <div class="job-body">
@@ -1384,7 +1285,7 @@
                                         <table>
                                             <tr>
                                                 <th>History ID</th>
-                                                <td>6b3426a5185de675</td>
+                                                <td>f5e405e655d58615</td>
                                             </tr>
                                             <tr>
                                                 <th>Exit Code</th>
@@ -1393,7 +1294,7 @@
                                             <tr>
                                                 <th>Command Line</th>
                                                 <td>
-                                                    <div class="command-line">ln -s '/data/share/it01/staging/1727/inputs/dataset_2514.dat' '1_reads' && mkdir -p '/data/share/it01/staging/1727/outputs/dataset_2515_files' && fastqc --outdir '/data/share/it01/staging/1727/outputs/dataset_2515_files'   --threads ${GALAXY_SLOTS:-2} --dir ${TEMP:-$_GALAXY_JOB_TMP_DIR} --quiet --extract  --kmers 7 -f 'fastq' '1_reads'  && cp '/data/share/it01/staging/1727/outputs/dataset_2515_files'/*/fastqc_data.txt output.txt && cp '/data/share/it01/staging/1727/outputs/dataset_2515_files'/*\.html output.html</div>
+                                                    <div class="command-line">ln -s '/data/share/it01/staging/1741/inputs/dataset_2534.dat' '1_reads' && mkdir -p '/data/share/it01/staging/1741/outputs/dataset_2535_files' && fastqc --outdir '/data/share/it01/staging/1741/outputs/dataset_2535_files'   --threads ${GALAXY_SLOTS:-2} --dir ${TEMP:-$_GALAXY_JOB_TMP_DIR} --quiet --extract  --kmers 7 -f 'fastq' '1_reads'  && cp '/data/share/it01/staging/1741/outputs/dataset_2535_files'/*/fastqc_data.txt output.txt && cp '/data/share/it01/staging/1741/outputs/dataset_2535_files'/*\.html output.html</div>
                                                 </td>
                                             </tr>
                                         </table>
@@ -1431,8 +1332,8 @@
                                                 <tr>
                                                     <td>Input</td>
                                                     <td>input_file</td>
-                                                    <td>f1c9f797778578f2</td>
-                                                    <td>6ce5d243-e3b5-45c9-86ec-593095959282</td>
+                                                    <td>0283ce28a6e51111</td>
+                                                    <td>ebdd7552-9794-4850-b1fa-ffd979c86d4a</td>
                                                 </tr>
                                                 
                                                 
@@ -1440,15 +1341,97 @@
                                                 <tr>
                                                     <td>Output</td>
                                                     <td>html_file</td>
-                                                    <td>6dc84148e301e032</td>
-                                                    <td>196c4176-4cdb-42ff-a072-3640c7b58f20</td>
+                                                    <td>d16aa8ff8afc2123</td>
+                                                    <td>eb19a590-d813-4a1b-a73b-a86cf1a79eae</td>
                                                 </tr>
                                                 
                                                 <tr>
                                                     <td>Output</td>
                                                     <td>text_file</td>
-                                                    <td>08891e82d9f1fba6</td>
-                                                    <td>c243a112-df6e-4946-b9a8-e0471982e7b6</td>
+                                                    <td>a3884012546ffa3e</td>
+                                                    <td>d81261e0-ef65-4489-a50f-04e0a0813b49</td>
+                                                </tr>
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="job-card">
+                                <div class="job-header">
+                                    <h3>Job ID: dfb2a08f2635e6d0 <span class="job-status-ok">(Status: ok)</span></h3>
+                                    <p>Tool: toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.5.3+galaxy1</p>
+                                    <div>
+                                        <span class="badge">Galaxy v24.1</span>
+                                        <span class="badge">Created: 2025-03-13 10:09:35.567041</span>
+                                        <span class="badge">Updated: 2025-03-13 10:16:49.307405</span>
+                                    </div>
+                                </div>
+                                <div class="job-body">
+                                    <div class="info-section">
+                                        <h4>Job Information</h4>
+                                        <table>
+                                            <tr>
+                                                <th>History ID</th>
+                                                <td>f5e405e655d58615</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Exit Code</th>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Command Line</th>
+                                                <td>
+                                                    <div class="command-line">set -o | grep -q pipefail && set -o pipefail;   ln -f -s '/data/share/it01/staging/1742/inputs/dataset_2534.dat' input_f.fastq &&   THREADS=${GALAXY_SLOTS:-4} && if [ "$THREADS" -gt 1 ]; then (( THREADS-- )); fi &&   bowtie2  -p "$THREADS"  -x '/cvmfs/data.galaxyproject.org/managed/bowtie2_index/sacCer3/sacCer3'   -U 'input_f.fastq'                  | samtools sort -l 0 -T "${TMPDIR:-.}" -O bam | samtools view --no-PG -O bam -@ ${GALAXY_SLOTS:-1} -o '/data/share/it01/staging/1742/outputs/dataset_2537.dat'</div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    
+                                    <div class="metrics-section">
+                                        <h4>Job Metrics</h4>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Metric</th>
+                                                    <th>Value</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    
+                                    <!-- Input/Output Section -->
+                                    <div class="io-section">
+                                        <h4>Inputs & Outputs</h4>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Type</th>
+                                                    <th>Name</th>
+                                                    <th>ID</th>
+                                                    <th>UUID</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                
+                                                <tr>
+                                                    <td>Input</td>
+                                                    <td>library|input_1</td>
+                                                    <td>0283ce28a6e51111</td>
+                                                    <td>ebdd7552-9794-4850-b1fa-ffd979c86d4a</td>
+                                                </tr>
+                                                
+                                                
+                                                
+                                                <tr>
+                                                    <td>Output</td>
+                                                    <td>output</td>
+                                                    <td>576a644ab4284431</td>
+                                                    <td>822b824e-3f49-42dd-93b1-4d1bcbed251d</td>
                                                 </tr>
                                                 
                                             </tbody>
@@ -1472,89 +1455,7 @@
                 <div id="usegalaxy_it-it-pulsar-timeout" class="tab-content">
                     <h4>Timeout Jobs</h4>
                     
-                        
-                            <div class="job-card">
-                                <div class="job-header">
-                                    <h3>Job ID: 2a222e9b43558f1d <span class="job-status-timeout">(Status: running)</span></h3>
-                                    <p>Tool: toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.5.3+galaxy1</p>
-                                    <div>
-                                        <span class="badge">Galaxy v24.1</span>
-                                        <span class="badge">Created: 2025-03-12 03:34:26.478507</span>
-                                        <span class="badge">Updated: 2025-03-12 03:46:07.987331</span>
-                                    </div>
-                                </div>
-                                <div class="job-body">
-                                    <div class="info-section">
-                                        <h4>Job Information</h4>
-                                        <table>
-                                            <tr>
-                                                <th>History ID</th>
-                                                <td>6b3426a5185de675</td>
-                                            </tr>
-                                            <tr>
-                                                <th>Exit Code</th>
-                                                <td>None</td>
-                                            </tr>
-                                            <tr>
-                                                <th>Command Line</th>
-                                                <td>
-                                                    <div class="command-line">set -o | grep -q pipefail && set -o pipefail;   ln -f -s '/data/share/it01/staging/1728/inputs/dataset_2514.dat' input_f.fastq &&   THREADS=${GALAXY_SLOTS:-4} && if [ "$THREADS" -gt 1 ]; then (( THREADS-- )); fi &&   bowtie2  -p "$THREADS"  -x '/cvmfs/data.galaxyproject.org/managed/bowtie2_index/sacCer3/sacCer3'   -U 'input_f.fastq'                  | samtools sort -l 0 -T "${TMPDIR:-.}" -O bam | samtools view --no-PG -O bam -@ ${GALAXY_SLOTS:-1} -o '/data/share/it01/staging/1728/outputs/dataset_2517.dat'</div>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    
-                                    <div class="metrics-section">
-                                        <h4>Job Metrics</h4>
-                                        <table>
-                                            <thead>
-                                                <tr>
-                                                    <th>Metric</th>
-                                                    <th>Value</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    
-                                    <!-- Input/Output Section -->
-                                    <div class="io-section">
-                                        <h4>Inputs & Outputs</h4>
-                                        <table>
-                                            <thead>
-                                                <tr>
-                                                    <th>Type</th>
-                                                    <th>Name</th>
-                                                    <th>ID</th>
-                                                    <th>UUID</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                
-                                                <tr>
-                                                    <td>Input</td>
-                                                    <td>library|input_1</td>
-                                                    <td>f1c9f797778578f2</td>
-                                                    <td>6ce5d243-e3b5-45c9-86ec-593095959282</td>
-                                                </tr>
-                                                
-                                                
-                                                
-                                                <tr>
-                                                    <td>Output</td>
-                                                    <td>output</td>
-                                                    <td>e74077d8ff41d26d</td>
-                                                    <td>856ffb0b-41b5-4a4f-bc05-5fbb9ed15261</td>
-                                                </tr>
-                                                
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        
+                        <p>No timeout jobs found.</p>
                     
                 </div>
             </div>
@@ -1591,12 +1492,12 @@
                         
                             <div class="job-card">
                                 <div class="job-header">
-                                    <h3>Job ID: cef5c4f52bf55ec2 <span class="job-status-ok">(Status: ok)</span></h3>
+                                    <h3>Job ID: 9b46f63486764801 <span class="job-status-ok">(Status: ok)</span></h3>
                                     <p>Tool: toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.5.3+galaxy1</p>
                                     <div>
                                         <span class="badge">Galaxy v24.1</span>
-                                        <span class="badge">Created: 2025-03-12 03:46:32.296209</span>
-                                        <span class="badge">Updated: 2025-03-12 03:47:35.804079</span>
+                                        <span class="badge">Created: 2025-03-13 10:17:09.576063</span>
+                                        <span class="badge">Updated: 2025-03-13 10:18:36.511103</span>
                                     </div>
                                 </div>
                                 <div class="job-body">
@@ -1605,7 +1506,7 @@
                                         <table>
                                             <tr>
                                                 <th>History ID</th>
-                                                <td>6b3426a5185de675</td>
+                                                <td>f5e405e655d58615</td>
                                             </tr>
                                             <tr>
                                                 <th>Exit Code</th>
@@ -1614,7 +1515,7 @@
                                             <tr>
                                                 <th>Command Line</th>
                                                 <td>
-                                                    <div class="command-line">set -o | grep -q pipefail && set -o pipefail;   ln -f -s '/data/share/it/staging/1730/inputs/dataset_2514.dat' input_f.fastq &&   THREADS=${GALAXY_SLOTS:-4} && if [ "$THREADS" -gt 1 ]; then (( THREADS-- )); fi &&   bowtie2  -p "$THREADS"  -x '/cvmfs/data.galaxyproject.org/managed/bowtie2_index/sacCer3/sacCer3'   -U 'input_f.fastq'                  | samtools sort -l 0 -T "${TMPDIR:-.}" -O bam | samtools view --no-PG -O bam -@ ${GALAXY_SLOTS:-1} -o '/data/share/it/staging/1730/outputs/dataset_2520.dat'</div>
+                                                    <div class="command-line">set -o | grep -q pipefail && set -o pipefail;   ln -f -s '/data/share/it/staging/1744/inputs/dataset_2534.dat' input_f.fastq &&   THREADS=${GALAXY_SLOTS:-4} && if [ "$THREADS" -gt 1 ]; then (( THREADS-- )); fi &&   bowtie2  -p "$THREADS"  -x '/cvmfs/data.galaxyproject.org/managed/bowtie2_index/sacCer3/sacCer3'   -U 'input_f.fastq'                  | samtools sort -l 0 -T "${TMPDIR:-.}" -O bam | samtools view --no-PG -O bam -@ ${GALAXY_SLOTS:-1} -o '/data/share/it/staging/1744/outputs/dataset_2540.dat'</div>
                                                 </td>
                                             </tr>
                                         </table>
@@ -1652,8 +1553,8 @@
                                                 <tr>
                                                     <td>Input</td>
                                                     <td>library|input_1</td>
-                                                    <td>f1c9f797778578f2</td>
-                                                    <td>6ce5d243-e3b5-45c9-86ec-593095959282</td>
+                                                    <td>0283ce28a6e51111</td>
+                                                    <td>ebdd7552-9794-4850-b1fa-ffd979c86d4a</td>
                                                 </tr>
                                                 
                                                 
@@ -1661,8 +1562,8 @@
                                                 <tr>
                                                     <td>Output</td>
                                                     <td>output</td>
-                                                    <td>b5ad8b5d6d6b746c</td>
-                                                    <td>047a260a-e0b8-433e-bef4-41e77ba975e4</td>
+                                                    <td>3dfdaea710f6d0ab</td>
+                                                    <td>6f1b1959-8e89-43d0-9bdf-8605c3839d0d</td>
                                                 </tr>
                                                 
                                             </tbody>
@@ -1673,12 +1574,12 @@
                         
                             <div class="job-card">
                                 <div class="job-header">
-                                    <h3>Job ID: 95ee34e0a0657bfa <span class="job-status-ok">(Status: ok)</span></h3>
+                                    <h3>Job ID: 7c4f8eff9a5980d8 <span class="job-status-ok">(Status: ok)</span></h3>
                                     <p>Tool: toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.74+galaxy1</p>
                                     <div>
                                         <span class="badge">Galaxy v24.1</span>
-                                        <span class="badge">Created: 2025-03-12 03:46:32.184611</span>
-                                        <span class="badge">Updated: 2025-03-12 03:47:33.968587</span>
+                                        <span class="badge">Created: 2025-03-13 10:17:09.430112</span>
+                                        <span class="badge">Updated: 2025-03-13 10:18:19.986681</span>
                                     </div>
                                 </div>
                                 <div class="job-body">
@@ -1687,7 +1588,7 @@
                                         <table>
                                             <tr>
                                                 <th>History ID</th>
-                                                <td>6b3426a5185de675</td>
+                                                <td>f5e405e655d58615</td>
                                             </tr>
                                             <tr>
                                                 <th>Exit Code</th>
@@ -1696,7 +1597,7 @@
                                             <tr>
                                                 <th>Command Line</th>
                                                 <td>
-                                                    <div class="command-line">ln -s '/data/share/it/staging/1729/inputs/dataset_2514.dat' '1_reads' && mkdir -p '/data/share/it/staging/1729/outputs/dataset_2518_files' && fastqc --outdir '/data/share/it/staging/1729/outputs/dataset_2518_files'   --threads ${GALAXY_SLOTS:-2} --dir ${TEMP:-$_GALAXY_JOB_TMP_DIR} --quiet --extract  --kmers 7 -f 'fastq' '1_reads'  && cp '/data/share/it/staging/1729/outputs/dataset_2518_files'/*/fastqc_data.txt output.txt && cp '/data/share/it/staging/1729/outputs/dataset_2518_files'/*\.html output.html</div>
+                                                    <div class="command-line">ln -s '/data/share/it/staging/1743/inputs/dataset_2534.dat' '1_reads' && mkdir -p '/data/share/it/staging/1743/outputs/dataset_2538_files' && fastqc --outdir '/data/share/it/staging/1743/outputs/dataset_2538_files'   --threads ${GALAXY_SLOTS:-2} --dir ${TEMP:-$_GALAXY_JOB_TMP_DIR} --quiet --extract  --kmers 7 -f 'fastq' '1_reads'  && cp '/data/share/it/staging/1743/outputs/dataset_2538_files'/*/fastqc_data.txt output.txt && cp '/data/share/it/staging/1743/outputs/dataset_2538_files'/*\.html output.html</div>
                                                 </td>
                                             </tr>
                                         </table>
@@ -1734,8 +1635,8 @@
                                                 <tr>
                                                     <td>Input</td>
                                                     <td>input_file</td>
-                                                    <td>f1c9f797778578f2</td>
-                                                    <td>6ce5d243-e3b5-45c9-86ec-593095959282</td>
+                                                    <td>0283ce28a6e51111</td>
+                                                    <td>ebdd7552-9794-4850-b1fa-ffd979c86d4a</td>
                                                 </tr>
                                                 
                                                 
@@ -1743,15 +1644,15 @@
                                                 <tr>
                                                     <td>Output</td>
                                                     <td>html_file</td>
-                                                    <td>de3505a46a9af67a</td>
-                                                    <td>5bbff2e6-aae2-48db-8728-10689a47937b</td>
+                                                    <td>3757c86633591a72</td>
+                                                    <td>893ff598-e8e9-4338-b858-405764259c64</td>
                                                 </tr>
                                                 
                                                 <tr>
                                                     <td>Output</td>
                                                     <td>text_file</td>
-                                                    <td>66ddd6008470d1ec</td>
-                                                    <td>e93cdccc-fd56-4f98-b6b4-2a8e0ef9a683</td>
+                                                    <td>edd8ff8bc3d1a24f</td>
+                                                    <td>ece0f5b7-afd6-4f3a-b70c-cc01e354f7a7</td>
                                                 </tr>
                                                 
                                             </tbody>
@@ -1812,151 +1713,12 @@
                         
                             <div class="job-card">
                                 <div class="job-header">
-                                    <h3>Job ID: ea6c8cb95362119f <span class="job-status-ok">(Status: ok)</span></h3>
-                                    <p>Tool: toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.74+galaxy1</p>
-                                    <div>
-                                        <span class="badge">Galaxy v24.1</span>
-                                        <span class="badge">Created: 2025-03-12 03:48:04.056450</span>
-                                        <span class="badge">Updated: 2025-03-12 03:48:53.860593</span>
-                                    </div>
-                                </div>
-                                <div class="job-body">
-                                    <div class="info-section">
-                                        <h4>Job Information</h4>
-                                        <table>
-                                            <tr>
-                                                <th>History ID</th>
-                                                <td>6b3426a5185de675</td>
-                                            </tr>
-                                            <tr>
-                                                <th>Exit Code</th>
-                                                <td>0</td>
-                                            </tr>
-                                            <tr>
-                                                <th>Command Line</th>
-                                                <td>
-                                                    <div class="command-line">ln -s '/data/share/datasets/002/dataset_2514.dat' '1_reads' && mkdir -p '/data/share/jwd/001/1731/outputs/dataset_03ed2ddf-8ca4-4c67-b1cd-85a5795eb3b1_files' && fastqc --outdir '/data/share/jwd/001/1731/outputs/dataset_03ed2ddf-8ca4-4c67-b1cd-85a5795eb3b1_files'   --threads ${GALAXY_SLOTS:-2} --dir ${TEMP:-$_GALAXY_JOB_TMP_DIR} --quiet --extract  --kmers 7 -f 'fastq' '1_reads'  && cp '/data/share/jwd/001/1731/outputs/dataset_03ed2ddf-8ca4-4c67-b1cd-85a5795eb3b1_files'/*/fastqc_data.txt output.txt && cp '/data/share/jwd/001/1731/outputs/dataset_03ed2ddf-8ca4-4c67-b1cd-85a5795eb3b1_files'/*\.html output.html</div>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    
-                                    <div class="metrics-section">
-                                        <h4>Job Metrics</h4>
-                                        <table>
-                                            <thead>
-                                                <tr>
-                                                    <th>Metric</th>
-                                                    <th>Value</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>hostname</td>
-                                                    <td>vgcnbwc-worker-ada-xl-0000.novalocal</td>
-                                                </tr>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>Cores Allocated</td>
-                                                    <td>3</td>
-                                                </tr>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>Memory Allocated (MB)</td>
-                                                    <td>5734</td>
-                                                </tr>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>Job Start Time</td>
-                                                    <td>2025-03-12 03:47:55</td>
-                                                </tr>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>Job End Time</td>
-                                                    <td>2025-03-12 03:48:14</td>
-                                                </tr>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>Job Runtime (Wall Clock)</td>
-                                                    <td>19 seconds</td>
-                                                </tr>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>CPU usage time</td>
-                                                    <td>15.3371250 seconds</td>
-                                                </tr>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>CPU user time</td>
-                                                    <td>13.5198160 seconds</td>
-                                                </tr>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>CPU system time</td>
-                                                    <td>1.8173080 seconds</td>
-                                                </tr>
-                                                
-                                                <tr class="metric-row">
-                                                    <td>Number of processes belonging to this cgroup killed by any kind of OOM killer</td>
-                                                    <td>0</td>
-                                                </tr>
-                                                
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    
-                                    <!-- Input/Output Section -->
-                                    <div class="io-section">
-                                        <h4>Inputs & Outputs</h4>
-                                        <table>
-                                            <thead>
-                                                <tr>
-                                                    <th>Type</th>
-                                                    <th>Name</th>
-                                                    <th>ID</th>
-                                                    <th>UUID</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                
-                                                <tr>
-                                                    <td>Input</td>
-                                                    <td>input_file</td>
-                                                    <td>f1c9f797778578f2</td>
-                                                    <td>6ce5d243-e3b5-45c9-86ec-593095959282</td>
-                                                </tr>
-                                                
-                                                
-                                                
-                                                <tr>
-                                                    <td>Output</td>
-                                                    <td>html_file</td>
-                                                    <td>7ab6578d7a7a48c7</td>
-                                                    <td>03ed2ddf-8ca4-4c67-b1cd-85a5795eb3b1</td>
-                                                </tr>
-                                                
-                                                <tr>
-                                                    <td>Output</td>
-                                                    <td>text_file</td>
-                                                    <td>7576c00c4d518367</td>
-                                                    <td>3eb06df9-0848-40de-83a5-5b7a2ea99475</td>
-                                                </tr>
-                                                
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        
-                            <div class="job-card">
-                                <div class="job-header">
-                                    <h3>Job ID: 8612fec6e71edc07 <span class="job-status-ok">(Status: ok)</span></h3>
+                                    <h3>Job ID: 6a96c651fea9dce3 <span class="job-status-ok">(Status: ok)</span></h3>
                                     <p>Tool: toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.5.3+galaxy1</p>
                                     <div>
                                         <span class="badge">Galaxy v24.1</span>
-                                        <span class="badge">Created: 2025-03-12 03:48:04.149961</span>
-                                        <span class="badge">Updated: 2025-03-12 03:48:53.292421</span>
+                                        <span class="badge">Created: 2025-03-13 10:18:40.489979</span>
+                                        <span class="badge">Updated: 2025-03-13 10:19:12.920771</span>
                                     </div>
                                 </div>
                                 <div class="job-body">
@@ -1965,7 +1727,7 @@
                                         <table>
                                             <tr>
                                                 <th>History ID</th>
-                                                <td>6b3426a5185de675</td>
+                                                <td>f5e405e655d58615</td>
                                             </tr>
                                             <tr>
                                                 <th>Exit Code</th>
@@ -1974,7 +1736,7 @@
                                             <tr>
                                                 <th>Command Line</th>
                                                 <td>
-                                                    <div class="command-line">set -o | grep -q pipefail && set -o pipefail;   ln -f -s '/data/share/datasets/002/dataset_2514.dat' input_f.fastq &&   THREADS=${GALAXY_SLOTS:-4} && if [ "$THREADS" -gt 1 ]; then (( THREADS-- )); fi &&   bowtie2  -p "$THREADS"  -x '/cvmfs/data.galaxyproject.org/managed/bowtie2_index/sacCer3/sacCer3'   -U 'input_f.fastq'                  | samtools sort -l 0 -T "${TMPDIR:-.}" -O bam | samtools view --no-PG -O bam -@ ${GALAXY_SLOTS:-1} -o '/data/share/jwd/001/1732/outputs/dataset_401d881b-726f-443e-a4f6-731bd1e41046.dat'</div>
+                                                    <div class="command-line">set -o | grep -q pipefail && set -o pipefail;   ln -f -s '/data/share/datasets/002/dataset_2534.dat' input_f.fastq &&   THREADS=${GALAXY_SLOTS:-4} && if [ "$THREADS" -gt 1 ]; then (( THREADS-- )); fi &&   bowtie2  -p "$THREADS"  -x '/cvmfs/data.galaxyproject.org/managed/bowtie2_index/sacCer3/sacCer3'   -U 'input_f.fastq'                  | samtools sort -l 0 -T "${TMPDIR:-.}" -O bam | samtools view --no-PG -O bam -@ ${GALAXY_SLOTS:-1} -o '/data/share/jwd/001/1746/outputs/dataset_d7ba2765-7b3d-4991-ae2b-e399233991db.dat'</div>
                                                 </td>
                                             </tr>
                                         </table>
@@ -2008,32 +1770,32 @@
                                                 
                                                 <tr class="metric-row">
                                                     <td>Job Start Time</td>
-                                                    <td>2025-03-12 03:48:00</td>
+                                                    <td>2025-03-13 10:18:16</td>
                                                 </tr>
                                                 
                                                 <tr class="metric-row">
                                                     <td>Job End Time</td>
-                                                    <td>2025-03-12 03:48:18</td>
+                                                    <td>2025-03-13 10:18:35</td>
                                                 </tr>
                                                 
                                                 <tr class="metric-row">
                                                     <td>Job Runtime (Wall Clock)</td>
-                                                    <td>18 seconds</td>
+                                                    <td>19 seconds</td>
                                                 </tr>
                                                 
                                                 <tr class="metric-row">
                                                     <td>CPU usage time</td>
-                                                    <td>46.5181140 seconds</td>
+                                                    <td>45.7324880 seconds</td>
                                                 </tr>
                                                 
                                                 <tr class="metric-row">
                                                     <td>CPU user time</td>
-                                                    <td>43.8168200 seconds</td>
+                                                    <td>42.9432280 seconds</td>
                                                 </tr>
                                                 
                                                 <tr class="metric-row">
                                                     <td>CPU system time</td>
-                                                    <td>2.7012940 seconds</td>
+                                                    <td>2.7892600 seconds</td>
                                                 </tr>
                                                 
                                                 <tr class="metric-row">
@@ -2062,8 +1824,8 @@
                                                 <tr>
                                                     <td>Input</td>
                                                     <td>library|input_1</td>
-                                                    <td>f1c9f797778578f2</td>
-                                                    <td>6ce5d243-e3b5-45c9-86ec-593095959282</td>
+                                                    <td>0283ce28a6e51111</td>
+                                                    <td>ebdd7552-9794-4850-b1fa-ffd979c86d4a</td>
                                                 </tr>
                                                 
                                                 
@@ -2071,8 +1833,147 @@
                                                 <tr>
                                                     <td>Output</td>
                                                     <td>output</td>
-                                                    <td>aab6e39b4c7672e8</td>
-                                                    <td>401d881b-726f-443e-a4f6-731bd1e41046</td>
+                                                    <td>e876bc5db8aebbfb</td>
+                                                    <td>d7ba2765-7b3d-4991-ae2b-e399233991db</td>
+                                                </tr>
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="job-card">
+                                <div class="job-header">
+                                    <h3>Job ID: 12ab378f116e2f04 <span class="job-status-ok">(Status: ok)</span></h3>
+                                    <p>Tool: toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.74+galaxy1</p>
+                                    <div>
+                                        <span class="badge">Galaxy v24.1</span>
+                                        <span class="badge">Created: 2025-03-13 10:18:40.365404</span>
+                                        <span class="badge">Updated: 2025-03-13 10:19:12.890229</span>
+                                    </div>
+                                </div>
+                                <div class="job-body">
+                                    <div class="info-section">
+                                        <h4>Job Information</h4>
+                                        <table>
+                                            <tr>
+                                                <th>History ID</th>
+                                                <td>f5e405e655d58615</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Exit Code</th>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Command Line</th>
+                                                <td>
+                                                    <div class="command-line">ln -s '/data/share/datasets/002/dataset_2534.dat' '1_reads' && mkdir -p '/data/share/jwd/001/1745/outputs/dataset_82de285b-edc8-4711-b848-535559bf800d_files' && fastqc --outdir '/data/share/jwd/001/1745/outputs/dataset_82de285b-edc8-4711-b848-535559bf800d_files'   --threads ${GALAXY_SLOTS:-2} --dir ${TEMP:-$_GALAXY_JOB_TMP_DIR} --quiet --extract  --kmers 7 -f 'fastq' '1_reads'  && cp '/data/share/jwd/001/1745/outputs/dataset_82de285b-edc8-4711-b848-535559bf800d_files'/*/fastqc_data.txt output.txt && cp '/data/share/jwd/001/1745/outputs/dataset_82de285b-edc8-4711-b848-535559bf800d_files'/*\.html output.html</div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    
+                                    <div class="metrics-section">
+                                        <h4>Job Metrics</h4>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Metric</th>
+                                                    <th>Value</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                
+                                                <tr class="metric-row">
+                                                    <td>hostname</td>
+                                                    <td>vgcnbwc-worker-ada-xl-0000.novalocal</td>
+                                                </tr>
+                                                
+                                                <tr class="metric-row">
+                                                    <td>Cores Allocated</td>
+                                                    <td>3</td>
+                                                </tr>
+                                                
+                                                <tr class="metric-row">
+                                                    <td>Memory Allocated (MB)</td>
+                                                    <td>5734</td>
+                                                </tr>
+                                                
+                                                <tr class="metric-row">
+                                                    <td>Job Start Time</td>
+                                                    <td>2025-03-13 10:18:11</td>
+                                                </tr>
+                                                
+                                                <tr class="metric-row">
+                                                    <td>Job End Time</td>
+                                                    <td>2025-03-13 10:18:31</td>
+                                                </tr>
+                                                
+                                                <tr class="metric-row">
+                                                    <td>Job Runtime (Wall Clock)</td>
+                                                    <td>20 seconds</td>
+                                                </tr>
+                                                
+                                                <tr class="metric-row">
+                                                    <td>CPU usage time</td>
+                                                    <td>15.2363570 seconds</td>
+                                                </tr>
+                                                
+                                                <tr class="metric-row">
+                                                    <td>CPU user time</td>
+                                                    <td>13.2787620 seconds</td>
+                                                </tr>
+                                                
+                                                <tr class="metric-row">
+                                                    <td>CPU system time</td>
+                                                    <td>1.9575950 seconds</td>
+                                                </tr>
+                                                
+                                                <tr class="metric-row">
+                                                    <td>Number of processes belonging to this cgroup killed by any kind of OOM killer</td>
+                                                    <td>0</td>
+                                                </tr>
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    
+                                    <!-- Input/Output Section -->
+                                    <div class="io-section">
+                                        <h4>Inputs & Outputs</h4>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Type</th>
+                                                    <th>Name</th>
+                                                    <th>ID</th>
+                                                    <th>UUID</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                
+                                                <tr>
+                                                    <td>Input</td>
+                                                    <td>input_file</td>
+                                                    <td>0283ce28a6e51111</td>
+                                                    <td>ebdd7552-9794-4850-b1fa-ffd979c86d4a</td>
+                                                </tr>
+                                                
+                                                
+                                                
+                                                <tr>
+                                                    <td>Output</td>
+                                                    <td>html_file</td>
+                                                    <td>eabe71acc918fcf7</td>
+                                                    <td>82de285b-edc8-4711-b848-535559bf800d</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                    <td>Output</td>
+                                                    <td>text_file</td>
+                                                    <td>bf15cfb77ca3117e</td>
+                                                    <td>a940160c-8575-440f-b230-a530fe9d7f17</td>
                                                 </tr>
                                                 
                                             </tbody>

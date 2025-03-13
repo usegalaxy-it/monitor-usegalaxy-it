@@ -1,0 +1,26 @@
+---
+services:
+  swag:
+    image: lscr.io/linuxserver/swag:latest
+    container_name: saber_dash
+    cap_add:
+      - NET_ADMIN
+    environment:
+      PUID: "1000"
+      PGID: "1000"
+      TZ: "Europe/Rome"
+      URL: "monitor.usegalaxy.it"
+      VALIDATION: "http"
+      EMAIL: ***REMOVED***
+      SWAG_AUTORELOAD: "true"
+      SWAG_AUTORELOAD_WATCHLIST: "/config/www"
+      #DHLEVEL=2048 #optional
+      ONLY_SUBDOMAINS: "false" #optional
+      STAGING: "true" #optional
+    volumes:
+      - /etc/saber_swag:/config
+    ports:
+      - 443:443
+      - 80:80 #optional
+      - 8443:8443
+    restart: unless-stopped
