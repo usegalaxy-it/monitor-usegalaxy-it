@@ -18,9 +18,39 @@ services:
       ONLY_SUBDOMAINS: "false" #optional
       STAGING: "true" #optional
     volumes:
-      - /etc/saber_swag:/config
+      - /etc/saber/swag:/config
     ports:
       - 443:443
       - 80:80 #optional
       - 8443:8443
     restart: unless-stopped
+
+  saber:
+    build:
+      context: /etc/saber
+      dockerfile: Dockerfile
+    image: saber-docker
+    container_name: saber_tester
+    volumes:
+      - /dev/log:/dev/log
+      - /etc/saber/configs:/configs
+      - /etc/saber/logs:/logs
+      - /etc/saber/swag/:/shared_data
+    environment:
+      SABER_PASSWORD: "${SABER_PASSWORD}"
+    restart: unless-stopped
+    labels:  #Changes to these need to be done on the playbook manually
+      ofelia.enabled: "true"
+      ofelia.job-exec.saber-daily.schedule: "0 2 * * *"
+      ofelia.job-exec.saber-daily.command: "/usr/local/bin/entrypoint.sh run-once"
+
+  scheduler:
+    image: mcuadros/ofelia:latest
+    container_name: scheduler
+    depends_on:
+      - saber
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    command:  daemon --docker
+    restart: unless-stopped
+
