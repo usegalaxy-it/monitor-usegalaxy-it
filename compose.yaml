@@ -41,7 +41,7 @@ services:
     restart: unless-stopped
     labels:  #Changes to these need to be done on the playbook manually
       ofelia.enabled: "true"
-      ofelia.job-exec.saber-daily.schedule: "0 2 * * *"
+      ofelia.job-exec.saber-daily.schedule: "0 0 2 * * *"
       ofelia.job-exec.saber-daily.command: "/usr/local/bin/entrypoint.sh run-once"
 
   scheduler:

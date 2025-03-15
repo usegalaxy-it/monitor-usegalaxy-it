@@ -98,6 +98,6 @@
         restart_policy: "{{ compose_config.services.saber.restart }}"
         labels:
           ofelia.enabled: "true"
-          ofelia.job-exec.saber-daily.schedule: "0 2 * * *"
+          ofelia.job-exec.saber-daily.schedule: "0 0 2 * * *"
           ofelia.job-exec.saber-daily.command: "/usr/local/bin/entrypoint.sh run-once"
 
