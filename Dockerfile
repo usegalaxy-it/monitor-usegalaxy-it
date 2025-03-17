@@ -6,9 +6,12 @@ RUN mkdir /output
 RUN mkdir /configs
 
 RUN apt-get update && apt-get install -y \
+    tzdata \
     curl \
     git \
     && rm -rf /var/lib/apt/lists/*
+
+ENV TZ=UTC
 
 WORKDIR /home
 
