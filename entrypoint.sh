@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 run_saber() {
+    (
     echo "Running SABER job at $(date)"
 
     cd /home
@@ -26,13 +27,14 @@ run_saber() {
     
     echo "SABER job completed at $(date) with exit code: $exit_code"
     return $exit_code
+) | tee /proc/1/fd/1
 }
 
 case "$1" in
     run-once)
         run_saber
         result=$?
-        echo "Task completed with exit code $result"
+        echo "Task completed with exit code $result" | tee -a /proc/1/fd/1
         exit $result
         ;;
     serve)
