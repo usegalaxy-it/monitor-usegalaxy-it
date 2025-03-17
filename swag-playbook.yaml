@@ -63,18 +63,6 @@
         source: build
         state: present
 
-    - name: Deploy Ofelia cron container
-      community.docker.docker_container:
-        name: "{{ service_config.services.scheduler.container_name | 
-          default('scheduler') }}"
-        image: "{{ compose_config.services.scheduler.image }}"
-        state: started
-        env: "{{ compose_config.services.scheduler.environment | default({}) }}"
-        ports: "{{ compose_config.services.scheduler.ports | default([]) }}"
-        volumes: "{{ compose_config.services.scheduler.volumes | default([]) }}"
-        command: "{{ compose_config.services.scheduler.command }}"
-        restart_policy: "{{ compose_config.services.scheduler.restart }}"
-
     - name: Deploy SWAG container
       community.docker.docker_container:
         name: "{{ service_config.services.swag.container_name | default('saber_dash') }}"
@@ -93,11 +81,15 @@
         state: started
         env:
           SABER_PASSWORD: "{{ password }}"
+          TZ: "Europe/Rome"
         ports: "{{ compose_config.services.saber.ports | default([]) }}"
         volumes: "{{ compose_config.services.saber.volumes | default([]) }}"
         restart_policy: "{{ compose_config.services.saber.restart }}"
-        labels:
-          ofelia.enabled: "true"
-          ofelia.job-exec.saber-daily.schedule: "0 0 2 * * *"
-          ofelia.job-exec.saber-daily.command: "/usr/local/bin/entrypoint.sh run-once"
 
+    - name: Add cron to run SABER daily
+      cron:
+        name: "Run {{ service_config.services.saber.container_name | default('saber_tester') }} daily"
+        user: root
+        minute: "33"
+        hour: "2"
+        job: "docker exec {{ service_config.services.saber.container_name | default('saber_tester') }} /usr/local/bin/entrypoint.sh run-once"
