@@ -15,7 +15,7 @@ ENV TZ=UTC
 
 WORKDIR /home
 
-RUN git clone --single-branch --branch jenkins https://github.com/gm-ds/saber /home/
+RUN git clone --single-branch --branch dev https://github.com/gm-ds/saber /home/
 RUN pip install --no-cache-dir -r requirements.txt
 
 ENV SABER_PASSWORD="toOverwrite"
