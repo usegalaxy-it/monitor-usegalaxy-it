@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+
 run_saber() {
     (
     echo "Running SABER job at $(date)"
@@ -9,6 +9,11 @@ run_saber() {
 
     python3 /home/saber.py -r /output/report.html -l /logs -s /configs/settings.yaml
     local exit_code=$?
+
+    if [[ $exit_code -ne 0 && $exit_code -ne 42 ]]; then
+        echo "SABER encountered an error (exit code: $exit_code), aborting..."
+        return $exit_code 
+    fi
 
     echo "Copying files to shared directory"
     current_date=$(date +%Y-%m-%d)
@@ -26,7 +31,7 @@ run_saber() {
     find /shared_data/www/index -name "*.html" -mtime +7 -exec rm {} \;
     
     echo "SABER job completed at $(date) with exit code: $exit_code"
-    return $exit_code
+    return 0
 ) | tee /proc/1/fd/1
 }
 
