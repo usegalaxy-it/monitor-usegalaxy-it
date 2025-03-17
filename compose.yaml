@@ -15,13 +15,13 @@ services:
       SWAG_AUTORELOAD: "true"
       SWAG_AUTORELOAD_WATCHLIST: "/config/www"
       #DHLEVEL=2048 #optional
-      ONLY_SUBDOMAINS: "false" #optional
-      STAGING: "true" #optional
+      ONLY_SUBDOMAINS: "false"
+      STAGING: "true"
     volumes:
       - /etc/saber/swag:/config
     ports:
       - 443:443
-      - 80:80 #optional
+      - 80:80 
       - 8443:8443
     restart: unless-stopped
 
