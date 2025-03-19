@@ -16,7 +16,7 @@ services:
       SWAG_AUTORELOAD_WATCHLIST: "/config/www"
       #DHLEVEL=2048 #optional
       ONLY_SUBDOMAINS: "false"
-      STAGING: "true"
+      STAGING: "false"
     volumes:
       - /etc/saber/swag:/config
     ports:
