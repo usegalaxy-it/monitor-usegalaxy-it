@@ -7,7 +7,7 @@ run_saber() {
     cd /home
     git pull
 
-    python3 /home/saber.py -r /output/report.html -l /logs -s /configs/settings.yaml
+    python3 /home/saber.py -r /output/report.html -l /logs -s /configs/settings.yaml > /output/report.json 2>&1
     local exit_code=$?
 
     if [[ $exit_code -ne 0 && $exit_code -ne 42 ]]; then

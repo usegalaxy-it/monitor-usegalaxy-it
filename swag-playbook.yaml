@@ -22,6 +22,7 @@
         group: ubuntu
       loop:
         - "{{  bdir }}"
+        - "{{  bdir }}/logs"
         - "{{  bdir }}/configs"
         - "{{ sdir }}"
         - "{{ sdir }}/www"
@@ -92,4 +93,4 @@
         user: root
         minute: "33"
         hour: "2"
-        job: "docker exec {{ service_config.services.saber.container_name | default('saber_tester') }} /usr/local/bin/entrypoint.sh run-once"
+        job: "docker exec {{ service_config.services.saber.container_name | default('saber_tester') }} /usr/local/bin/entrypoint.sh run-once > /var/log/cron_saber.log 2>&1"
