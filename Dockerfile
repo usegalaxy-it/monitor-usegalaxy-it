@@ -6,6 +6,7 @@ RUN mkdir /output
 RUN mkdir /configs
 
 RUN apt-get update && apt-get install -y \
+    procps \
     tzdata \
     curl \
     git \
