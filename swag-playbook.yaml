@@ -91,6 +91,6 @@
       cron:
         name: "Run {{ service_config.services.saber.container_name | default('saber_tester') }} daily"
         user: root
-        minute: "33"
-        hour: "2"
+        minute: "*"
+        hour: "23"
         job: "docker exec {{ service_config.services.saber.container_name | default('saber_tester') }} /usr/local/bin/entrypoint.sh run-once > /var/log/cron_saber.log 2>&1"
