@@ -1,8 +1,12 @@
-FROM ubuntu/python:3.12-24.04_stable
+FROM ubuntu:latest
 
 RUN mkdir -p /shared_data/www/index /logs /output /configs
 
 RUN apt-get update && apt-get install -y \
+    python3.12 \
+    python3.12-venv \
+    python3.12-dev \
+    python3-pip \
     procps \
     vim \
     tzdata \
