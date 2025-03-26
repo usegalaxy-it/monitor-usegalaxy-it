@@ -7,12 +7,15 @@ RUN mkdir /configs
 
 RUN apt-get update && apt-get install -y \
     procps \
+    vim \
     tzdata \
     curl \
     git \
     && rm -rf /var/lib/apt/lists/*
 
 ENV TZ=UTC
+
+ENV EDITOR=vim
 
 WORKDIR /home
 
