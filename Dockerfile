@@ -21,7 +21,13 @@ ENV EDITOR=vim
 WORKDIR /home/saber
 
 RUN git clone --single-branch --branch dev https://github.com/gm-ds/saber /home/saber/
-RUN pip3 install --no-cache-dir -r requirements.txt
+
+RUN python3.12 -m venv /home/saber/venv
+RUN /home/saber/venv/bin/pip install --upgrade pip
+RUN /home/saber/venv/bin/pip install --no-cache-dir -r /home/saber/requirements.txt
+
+ENV PATH="/home/saber/venv/bin:$PATH"
+
 
 ENV SABER_PASSWORD="toOverwrite"
 
