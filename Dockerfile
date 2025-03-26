@@ -1,9 +1,6 @@
-FROM python:3.9-slim
+FROM ubuntu/python:3.12-24.04_stable
 
-RUN mkdir -p /shared_data/www/index
-RUN mkdir /logs
-RUN mkdir /output
-RUN mkdir /configs
+RUN mkdir -p /shared_data/www/index /logs /output /configs
 
 RUN apt-get update && apt-get install -y \
     procps \
