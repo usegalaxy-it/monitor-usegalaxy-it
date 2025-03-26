@@ -28,15 +28,16 @@
         - "{{ sdir }}/www"
         - "{{ sdir }}/www/index"
 
-    - name: Ensure directories exist with up-to-date contents
+    - name: Ensure up-to-date contents
       ansible.builtin.copy:
         src: "{{ item.src }}"
-        dest: "{{ bdir }}/{{ item.dest | basename }}"
+        dest: "{{ item.dest }}"
         owner: ubuntu
         group: ubuntu
         mode: "{{ item.mode }}"
         directory_mode: "0755"
         force: true
+        remote_src: false
       loop:
         - { src: "./nginx/", dest: "{{ sdir }}/nginx", mode: "0644" }
         - { src: "./compose.yaml", dest: "{{ bdir }}/compose.yaml", mode: "0644" }
@@ -44,9 +45,10 @@
         - { src: "./entrypoint.sh", dest: "{{ bdir }}/entrypoint.sh", mode: "0644" }
         - { src: "./workflow_test_eu.ga", dest: "{{ bdir }}/configs/workflow_test_eu.ga", mode: "0644" }
         - { src: "./workflow_test.ga", dest: "{{ bdir }}/configs/workflow_test.ga", mode: "0644" }
-        - { src: "./example_settings.yaml", dest: "{{ bdir }}/configs/settings.yaml", mode: "0644" }
+        - { src: "./saber_monitor_settings.yaml", dest: "{{ bdir }}/configs/settings.yaml", mode: "0644" }
       loop_control:
         label: "{{ item.src }}"
+      become: yes
 
 
     - name: Remove existing Docker image
