@@ -4,10 +4,10 @@ run_saber() {
     (
     echo "Running SABER job at $(date)"
 
-    cd /home
+    cd /home/saber
     git pull
 
-    python3 /home/saber.py -r /output/report.html -l /logs -s /configs/settings.yaml > /logs/report.json 2>&1
+    python3 /home/saber/saber.py -r /output/report.html -l /logs -s /configs/settings.yaml > /logs/report.json 2>&1
     local exit_code=$?
 
     if [[ $exit_code -ne 0 && $exit_code -ne 42 ]]; then

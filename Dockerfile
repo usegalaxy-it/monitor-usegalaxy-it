@@ -18,9 +18,9 @@ ENV TZ=UTC
 
 ENV EDITOR=vim
 
-WORKDIR /home
+WORKDIR /home/saber
 
-RUN git clone --single-branch --branch dev https://github.com/gm-ds/saber /home/
+RUN git clone --single-branch --branch dev https://github.com/gm-ds/saber /home/saber/
 RUN pip3 install --no-cache-dir -r requirements.txt
 
 ENV SABER_PASSWORD="toOverwrite"
