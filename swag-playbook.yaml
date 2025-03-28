@@ -6,7 +6,7 @@
   vars:
     bdir: "/etc/saber"
     sdir: "{{ bdir }}/swag"
-    saber_docker: "{{ saber_docker | default(false) }}"
+    saber_docker: false
 
   tasks:
     - name: Load Docker Compose file
