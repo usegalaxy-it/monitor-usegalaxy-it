@@ -6,6 +6,7 @@
   vars:
     bdir: "/etc/saber"
     sdir: "{{ bdir }}/swag"
+    saber_docker: "{{ saber_docker | default(false) }}"
 
   tasks:
     - name: Load Docker Compose file
@@ -22,11 +23,22 @@
         group: ubuntu
       loop:
         - "{{  bdir }}"
-        - "{{  bdir }}/logs"
-        - "{{  bdir }}/configs"
         - "{{ sdir }}"
         - "{{ sdir }}/www"
         - "{{ sdir }}/www/index"
+
+    - name: Ensure critical directories exist for saber container
+      ansible.builtin.file:
+        path: "{{ item }}"
+        state: directory
+        mode: '0755'
+        owner: ubuntu
+        group: ubuntu
+      loop:
+        - "{{  bdir }}/logs"
+        - "{{  bdir }}/configs"
+      when: saber_docker
+
 
     - name: Ensure up-to-date contents
       ansible.builtin.copy:
@@ -40,6 +52,21 @@
         remote_src: false
       loop:
         - { src: "./nginx/", dest: "{{ sdir }}/nginx", mode: "0644" }
+      loop_control:
+        label: "{{ item.src }}"
+      become: yes
+
+    - name: Ensure up-to-date contents for saber container
+      ansible.builtin.copy:
+        src: "{{ item.src }}"
+        dest: "{{ item.dest }}"
+        owner: ubuntu
+        group: ubuntu
+        mode: "{{ item.mode }}"
+        directory_mode: "0755"
+        force: true
+        remote_src: false
+      loop:
         - { src: "./compose.yaml", dest: "{{ bdir }}/compose.yaml", mode: "0644" }
         - { src: "./Dockerfile", dest: "{{ bdir }}/Dockerfile", mode: "0644" }
         - { src: "./entrypoint.sh", dest: "{{ bdir }}/entrypoint.sh", mode: "0644" }
@@ -49,6 +76,7 @@
       loop_control:
         label: "{{ item.src }}"
       become: yes
+      when: saber_docker
 
 
     - name: Remove existing Docker image
@@ -65,6 +93,7 @@
           dockerfile: Dockerfile
         source: build
         state: present
+      when: saber_docker
 
     - name: Deploy SWAG container
       community.docker.docker_container:
@@ -81,7 +110,7 @@
       community.docker.docker_container:
         name: "{{ service_config.services.saber.container_name | default('saber_tester') }}"
         image: "{{ compose_config.services.saber.image }}"
-        state: started
+        state: "{{ 'started' if saber_docker else 'absent' }}"
         env:
           SABER_PASSWORD: "{{ password }}"
           TZ: "Europe/Rome"
@@ -92,6 +121,7 @@
     - name: Add cron to run SABER daily
       cron:
         name: "Run {{ service_config.services.saber.container_name | default('saber_tester') }} daily"
+        state: "{{ 'present' if saber_docker else 'absent' }}"
         user: root
         minute: "*"
         hour: "23"

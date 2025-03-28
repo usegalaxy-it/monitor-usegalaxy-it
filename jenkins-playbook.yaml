@@ -1,0 +1,52 @@
+---
+- name: Setup config files and SWAG
+  hosts: all
+  become: true
+
+  vars:
+    bdir: "/etc/saber"
+    sdir: "{{ bdir }}/swag"
+
+  tasks:
+
+    - name: Ensure critical directories exist
+      ansible.builtin.file:
+        path: "{{ item }}"
+        state: directory
+        mode: '0755'
+        owner: ubuntu
+        group: ubuntu
+      loop:
+        - "{{ sdir }}/www"
+        - "{{ sdir }}/www/index"
+
+    - name: Find files older than 7 days
+      ansible.builtin.find:
+        paths: "{{ sdir }}/www/index"
+        age: "7d"
+        file_type: "file"
+      register: old_files
+
+    - name: Remove old files
+      ansible.builtin.file:
+        path: "{{ item.path }}"
+        state: absent
+      loop: "{{ old_files.files }}"
+
+
+    - name: Ensure up-to-date contents
+      ansible.builtin.copy:
+        src: "{{ item.src }}"
+        dest: "{{ item.dest }}"
+        owner: ubuntu
+        group: ubuntu
+        mode: "{{ item.mode }}"
+        directory_mode: "0755"
+        force: true
+        remote_src: false
+      loop:
+        - { src: "./report.html", dest: "{{ sdir }}/www/report.html", mode: "0644" }
+        - { src: "./report.html", dest: "{{ sdir }}/www/index/{{ report_name | default(old_report.html) }}", mode: "0644" }
+      loop_control:
+        label: "{{ item.src }}"
+      become: yes
