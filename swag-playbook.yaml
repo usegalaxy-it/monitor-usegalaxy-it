@@ -25,7 +25,7 @@
         - "{{  bdir }}"
         - "{{ sdir }}"
         - "{{ sdir }}/www"
-        - "{{ sdir }}/www/index"
+        - "{{ sdir }}/www/reports"
 
     - name: Ensure critical directories exist for saber container
       ansible.builtin.file:
@@ -101,7 +101,7 @@
         image: "{{ compose_config.services.swag.image }}"
         state: started
         capabilities: "{{ compose_config.services.swag.cap_add | default([]) }}"
-        env: "{{ compose_config.services.swag.environment | default({}) }}"
+        env: "{{ compose_config.services.swag.environment | combine({'EMAIL': cert_mail}) | default({}) }}"
         ports: "{{ compose_config.services.swag.ports | default([]) }}"
         volumes: "{{ compose_config.services.swag.volumes | default([]) }}"
         restart_policy: "{{ compose_config.services.swag.restart }}"
