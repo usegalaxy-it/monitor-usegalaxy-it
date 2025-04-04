@@ -11,7 +11,7 @@ services:
       TZ: "Europe/Rome"
       URL: "monitor.usegalaxy.it"
       VALIDATION: "http"
-      EMAIL: ***REMOVED***
+      EMAIL: "example@mail.org"
       SWAG_AUTORELOAD: "true"
       SWAG_AUTORELOAD_WATCHLIST: "/config/www"
       #DHLEVEL=2048 #optional
