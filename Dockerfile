@@ -20,7 +20,7 @@ ENV EDITOR=vim
 
 WORKDIR /home/saber
 
-RUN git clone --single-branch --branch dev https://github.com/gm-ds/saber /home/saber/
+RUN git clone --single-branch --branch main https://github.com/gm-ds/saber /home/saber/
 
 RUN python3.12 -m venv /home/saber/venv
 RUN /home/saber/venv/bin/pip install --upgrade pip
