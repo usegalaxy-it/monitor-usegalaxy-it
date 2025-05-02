@@ -2,7 +2,6 @@ pipeline {
   agent { label 'adacloud-bridge-wn' }
   triggers { githubPush() }
   options {
-    skipDefaultCheckout(true)
     buildDiscarder(logRotator(numToKeepStr: '7'))
     disableConcurrentBuilds()
   }
@@ -31,7 +30,12 @@ pipeline {
     }
 
     stage('Deploy') {
-      when { branch 'master' }
+      when { 
+          expression {
+              def branch = sh(script: 'git rev-parse --abbrev-ref HEAD', returnStdout: true).trim()
+              return branch == 'master'
+          }
+      }
       steps {
         sshagent(['usegalaxy_it_robot_ssh_key_pair']) {
           withCredentials([
