@@ -16,13 +16,13 @@ pipeline {
       when { 
         anyOf {
         changeset pattern: 'nginx/**', comparator: 'ANT'
-        changeset pattern: 'nginx/site-confs/**', comparator: 'ANT'
         changeset pattern: 'compose.yaml', comparator: 'ANT'
         changeset pattern: 'Dockerfile', comparator: 'ANT'
         changeset pattern: 'entrypoint.sh', comparator: 'ANT'
         changeset pattern: 'saber_monitor_settings.yaml', comparator: 'ANT'
         changeset pattern: 'swag-playbook.yaml', comparator: 'ANT'
-        changeset pattern: 'workflow_*', comparator: 'ANT'
+        changeset pattern: '**/*.ga', comparator: 'ANT'
+        changeset pattern: 'Jenkinsfile', comparator: 'ANT'
     }
       }
       steps {
