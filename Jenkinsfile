@@ -30,14 +30,14 @@ pipeline {
     }
 
     stage('Deploy') {
-      when { 
-          expression {
-              script {
-                  def branch = sh(script: 'git rev-parse --abbrev-ref HEAD', returnStdout: true).trim()
-                  return branch == 'master'
-                }
-            }
-      }
+    //   when { 
+    //       expression {
+    //           script {
+    //               def branch = sh(script: 'git rev-parse --abbrev-ref HEAD', returnStdout: true).trim()
+    //               return branch == 'master'
+    //             }
+    //         }
+    //   }
       steps {
         sshagent(['usegalaxy_it_robot_ssh_key_pair']) {
           withCredentials([
