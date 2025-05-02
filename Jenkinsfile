@@ -14,14 +14,16 @@ pipeline {
 
     stage('Check for Relevant Changes') {
       when { 
-        changeset "nginx/**",
-                  "compose.yaml",
-                  "Dockerfile",
-                  "entrypoint.sh",
-                  "saber_monitor_settings.yaml",
-                  "swag-playbook.yaml",
-                  "**/*.ga",
-                  "Jenkinsfile"
+        changeset glob: [
+            "nginx/**",
+            "compose.yaml",
+            "Dockerfile",
+            "entrypoint.sh",
+            "saber_monitor_settings.yaml",
+            "swag-playbook.yaml",
+            "**/*.ga",
+            "Jenkinsfile"
+        ]
       }
       steps {
         echo "Relevant files changed—continuing build."
@@ -63,7 +65,7 @@ pipeline {
         cleanWhenNotBuilt: true,
         cleanWhenUnstable: true,
         cleanupMatrixParent: true,
-        excludePatterns: "**/venv/**"
+        patterns: [[pattern: '**/venv/**', type: 'EXCLUDE']]
       )
     }
     failure {
