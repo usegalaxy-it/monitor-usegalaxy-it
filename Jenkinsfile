@@ -14,16 +14,16 @@ pipeline {
 
     stage('Check for Relevant Changes') {
       when { 
-        changeset glob: [
-            "nginx/**",
-            "compose.yaml",
-            "Dockerfile",
-            "entrypoint.sh",
-            "saber_monitor_settings.yaml",
-            "swag-playbook.yaml",
-            "**/*.ga",
-            "Jenkinsfile"
-        ]
+        anyOf {
+        changeset pattern: 'nginx/**', comparator: 'ANT'
+        changeset pattern: 'nginx/site-confs/**', comparator: 'ANT'
+        changeset pattern: 'compose.yaml', comparator: 'ANT'
+        changeset pattern: 'Dockerfile', comparator: 'ANT'
+        changeset pattern: 'entrypoint.sh', comparator: 'ANT'
+        changeset pattern: 'saber_monitor_settings.yaml', comparator: 'ANT'
+        changeset pattern: 'swag-playbook.yaml', comparator: 'ANT'
+        changeset pattern: 'workflow_*', comparator: 'ANT'
+    }
       }
       steps {
         echo "Relevant files changed—continuing build."
